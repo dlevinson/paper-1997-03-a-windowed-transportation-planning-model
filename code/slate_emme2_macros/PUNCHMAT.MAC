@@ -1,0 +1,11 @@
+ ~/ t.punchmat
+ ~/ usage: emme2 clear 314 batch -m "t.punchmat %1%"
+ ~/ DML 7.23.92
+ 3        /punch a matrix
+ %1%      /matrix to punch
+           /constraint
+ n        /aggregation
+ n        /aggregation
+ n         /submatrix
+ q
+ q

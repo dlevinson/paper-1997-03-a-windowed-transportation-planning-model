@@ -1,0 +1,21 @@
+~/ t.plotcap DML 8/9/91
+~/ plot capacities
+~/ emme2 clear 213 batch -m "t.plotcap"
+ 6       /plot user data
+ 2       /link data
+ 2       /ul2
+ 3       /bars and numbers
+ y
+ 1
+ y
+ 101 981 10
+ 102 982 10
+ 103 983 10
+ 104 984 10
+  
+ n
+ 1000       /scale
+ ~/demarcations and annotations
+ 4 5  
+ q
+ q

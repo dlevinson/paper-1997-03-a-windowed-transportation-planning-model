@@ -1,0 +1,25 @@
+ ~/ t.capadj1
+ ~/ macro to prepare auto assignment for capacity adjustment algorithm
+ ~/ assign new and old auto demand as volau and volad respectively
+ ~/ usage: emme2 clear 511 batch -m "t.capadj1 numit"
+ ~/ DML 5.5.92
+ 1          /fixed demand auto assignment
+ ~?q=2
+ 2            /new assignment
+ 5            /assign additional demand
+ mf4         /auto demand
+              /autoocc
+ mf4          /additional demand (new auto demand)
+ mf2          /auto times
+ y             /change name
+ TIMOUT        /name
+ Time output from assignment
+ y
+ 0
+ ~?q=1
+ y           /initialize auto volumes
+ 5              /no additional path attributes calculated
+ %1%
+ -999999
+ -999999
+ q

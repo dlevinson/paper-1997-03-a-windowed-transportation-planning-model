@@ -1,0 +1,20 @@
+ ~/ t.capadj2
+ ~/ macro to adjust capacity by ratio of new to old volume
+ ~/ usage: emme2 clear 241 batch -m "t.capadj2"
+ ~/ where volau = old trip table assigned volumes
+ ~/       volad = new trip table assigned volumes 
+ ~/               from Heinz Spiess demand adjustment algorithm
+ ~/       ul2   = capacity
+ ~/ DML 5.5.92
+ 1              /network calculations
+ y              /save result
+ ul2            /capacity
+ 0.5*ul2+((0.5*ul2*volad/volau).max.1).min.2300
+  
+ volau=1,999999
+ &volad=1,999999
+ &ul2=1,2300
+
+ 4           /none report
+ q
+ q

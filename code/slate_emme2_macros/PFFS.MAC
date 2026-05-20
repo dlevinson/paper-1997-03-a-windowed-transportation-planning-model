@@ -1,0 +1,19 @@
+~/ t.plotffs DML 8/9/91
+~/ plot freeflow speeds in ul3
+~/ emme2 clear 213 batch -m "t.plotffs"
+ 6       /plot user data
+ 2       /link data
+ 3       /ul3
+ 3       /bars and numbers
+ y
+ 1
+ y
+ 101 981 10
+ 102 982 10
+ 103 983 10
+ 104 984 10
+  
+ n
+ 20        /scale
+ 4
+ q

@@ -1,0 +1,21 @@
+ ~/ t.sumtime - macro to sum person minutes of travel in Germantown
+ ~/ for all trips in Model Universe
+ ~/ usage: emme2 clear 321 batch -m "t.sumtime"
+ ~/ DML 11.20.91
+ ~/
+ 1
+ y
+ ms50
+ y
+ sumtim
+ Sum of Person Hours in Study Area
+ y
+ 0
+ mf02*mf03
+  
+ mf02
+ 0.001,99999,include
+ n
+ +
+ +
+ q

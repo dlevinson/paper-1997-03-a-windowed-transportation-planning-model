@@ -1,0 +1,1 @@
+awk 'FILENAME == "obsturnvol.in" {  intervol[$1$2$3]=$4  }FILENAME == "turnvol.8994" {if(intervol[$1$2$3]){print $1,$2,$3,$4-intervol[$1$2$3]}}' obsturnvol.in turnvol.8994

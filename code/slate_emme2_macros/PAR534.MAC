@@ -1,0 +1,6 @@
+ ~/prepare DISA access and egrees nodes
+ 3           /change module parameters 534
+ n  
+ y
+ 4           /end
+ 9           /end emme2

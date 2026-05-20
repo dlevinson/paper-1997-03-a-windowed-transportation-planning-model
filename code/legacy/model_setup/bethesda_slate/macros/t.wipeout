@@ -1,0 +1,1 @@
+ ~/ t.wipeout ~/ macro to erase all origin matrices in certain range ~/ for certain zones ~/ usage: emme2 clear 321 batch -m "t.wipeout" ~x=35 ~:loop ~x+1 1 y mo%x% n 0     n ~?x<99 ~$loop q q

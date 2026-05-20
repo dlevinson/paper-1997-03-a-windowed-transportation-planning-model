@@ -1,0 +1,29 @@
+~/##### prepare add option assignment to compute gradient matrix ##########
+~/ m.demadj3 (Heinz Spiess, mod. DML)
+1         / fixed demand auto assignment
+~?q=2
+2         / new assignment
+5         / additional options
+mf4       / demand matrix
+          / no auto occupancy
+mf5       / add. demand = addl attribute matrix
+%2%       / no auto times
+~?q=1
+y         / initialize volumes
+3         / addl path attribute is UL3
++         / addl path operator 
+-99999,99999     / addl path threshold
+mf5       / addl attribute matrix (4.3 and later)
+y       
+D-ms90  / matrix name
+demand gradient step at ms90
+~?q=1
+y         / initialize matrix
+0         / to zero
+3         / save weighted addl path attributes in matrix
+~?q=1
+y         / initialize volumes
+%1%       / number of iterations
+-999999       / relative gap
+-999999       / normalized gap
+q

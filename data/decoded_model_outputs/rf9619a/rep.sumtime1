@@ -1,0 +1,25 @@
+ EMME/2 Module: 3.21          Date: 93 03 12           User: E055/MNChPC....BAT           Page:*****
+ Project: §Cethesda Staging Analysis 
+ ---------------------------------------------------------------------------------------------------
+
+
+ MATRIX CALCULATIONS
+ *******************
+
+
+ Expression:
+
+ ms50 = mf02 * mf04
+
+ Result matrix: §              ms50: sumtim    kum of Person Hours in Study Area       
+
+ Data matrices: §              mf02: timout    Output Travel Time from Assignment      
+                               mf04: 9615TT    New Ph 1B w/ half ext pipeline and TDM  
+
+ Constraint matrix: §          mf02: timout    Output Travel Time from Assignt   nt      
+ Constraint interval: §          .001       99999      include
+
+ kubmatrix:                     all origins            all destinations
+
+ Aggregation over origins: §                    +
+ Aggregation over destinations

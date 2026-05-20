@@ -1,0 +1,11 @@
+~/ /##### compute gradient and objective function ###########################
+~/ m.zeroudata by DML 5.7.92
+~/ usage: emme2 clear 241 batch -m "m.zeroudata %1%"
+1         / network calculation - zero ul3
+y
+%1%
+0
+
+all
+4
+q

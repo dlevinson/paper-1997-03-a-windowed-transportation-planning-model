@@ -1,0 +1,25 @@
+~/t.switches    function when switch is on:
+n         /don't change terminal type
+BAT       /Batch mode
+on=0     /ask for list devisce before each report
+off=1     /ask for graphics device before each plot
+on=2      /display menu
+off=3     /ask for column wise when matrix initialized
+on=4      /ask whether module parameters should be saved on disk
+on=5      /allow saving of predefined windows using w greater than
+off=6     /ask for current scenario at beginning of session
+on=7      /ask for terminal type at beginning of session
+off=8     /ask for printer type
+off=9     /ask for plot file
+off=10    /read device table at beginning of next session
+on=11     /do not echo batch input unless error detected
+off=12    /
+on=13     /dialog command mode 
+off=14    /copy mode, write to plot file & terminal simultaneously
+off=15    /echo mode, repeat all dialog input on dialog output stream
+off=16    /insert blank line between modules on menu
+off=17    /display node labels instead of node numbers
+off=28    /dos tablet
+off=29    /dos mouse
+off=30    /diagnostic messages
+9         /quit emme2

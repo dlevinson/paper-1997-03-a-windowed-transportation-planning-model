@@ -1,0 +1,17 @@
+ ~/ t.zeromat
+ ~/ macro to clear full matrix 
+ ~/ usage: emme2 clear 321 batch -m "t.zeromat mfnn"
+ ~/ DML 5.6.92
+ 1          /matrix calculations
+ y         /save result
+ %1%
+ y
+ zeroes
+ Matrix of Zeroes
+ y
+ 0
+ 0
+  
+  
+ n
+ q

@@ -1,0 +1,24 @@
+ ~/ t.plotcfr
+ ~/ plot congested speed/ freeflow speed ratio
+ ~/ DML 2/11/91
+ ~/ usage: emme2 clear 213 batch -m "t.plotcfr $window"
+ 6      /users data
+ 2      /link
+ 2      /ul2 = ratio
+ 1      /bars
+ y      /index
+ 1
+ n      /nodes
+ 101 991 10
+ 102 992 10
+ 103 993 10
+ 104 994 10
+ &ul2=0,1
+  
+ y      /yes window
+ 4
+ %1%
+ 1      /scale
+  
+ q
+ q

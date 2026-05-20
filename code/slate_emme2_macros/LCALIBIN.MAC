@@ -1,0 +1,18 @@
+ ~/ t.lcalibin
+ ~/ macro to batch in data from lcalib link calibration program
+ ~/ usage: emme2 clear 241 batch -m "t.lcalibin"
+ ~/ DML 5.18.92
+ 3         /input attribute using batch entry
+ ul1          /freeflow speed
+ all            /link types
+ 2,3,4
+ n            /generate reports
+ y      /save
+ 3           /input attribute
+ ul2          /capacity
+ all
+ 2,3,5
+ n            /report
+ y         /save
+ q
+ q

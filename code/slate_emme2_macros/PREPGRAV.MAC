@@ -1,0 +1,13 @@
+ ~/ t.prepgrav
+ ~/ macro to dump trips by subzone for gravity matrix weighting
+ ~/ DML 2.14.92
+ 1         /list a matrix
+ 3         /several matrices by zones
+ mo34      /zoneid
+ mo01      /otrips
+ md01      /dtrips
+  
+ mo34
+ 0,0,exclude 
+ n
+ q

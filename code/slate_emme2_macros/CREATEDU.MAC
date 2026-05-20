@@ -1,0 +1,13 @@
+ ~/ t.createdummy : macro to create dummy scenario
+ ~/ DML March 20, 1991
+ ~/ usage emme2 clear 122 batch -m "t.createdummy %1%"
+ 2            /module 122 delete scenario
+ 1            /delete scenario 1
+ y            /ok
+ 3            /copy scenario
+ %1%          /scenario to be copied
+ 1            /scenario to hold copy
+ Dummy Scenario - Copy of %1%
+ n            /not current
+ 6            /end
+ 9

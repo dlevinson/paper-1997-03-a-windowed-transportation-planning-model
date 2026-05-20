@@ -1,0 +1,15 @@
+ 7                /change module parameters module 213
+ 0,0              /width height of nodes no nodenum
+ 4,4              /width height of nodes with nodenum
+ 0.00             /offset to right for links
+ 1.75             /character height
+ y                /plot only if connected
+ -999999,999999   /upper lower threshold
+ .2               /hatchwidth for link bars
+ .5               /hatchwidth for node circles
+ .5               /exponent for circle proportionality
+ 2,3              /default color indices
+ y                /ask for color index attribute
+ y                /save on disk
+ 8                /end module 213
+ 9                /end emme2

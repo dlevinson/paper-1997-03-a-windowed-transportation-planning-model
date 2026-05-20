@@ -1,0 +1,545 @@
+ ~/ t.LATRtripspm
+ ~/ pm Local Area Trip Generation Rates
+ ~/ usage: emme2 clear 321 batch -m "t.LATRtripspm"
+ ~/
+ ~/ mo01 md01 - trips internal to area
+ ~/ mo02 md02 - trips external to area
+ ~/ mo03 md03 - total trips
+ ~/ mo05 md05 - external station adjustment factor
+ ~/ mo06      - Vehicle Trips Off Road
+ ~/ mo07 md07 - Occupancy Rate of Office Buildings
+ ~/ mo10 md10 - sq.ft. of general office 
+ ~/ mo11 md11 - GLA of retail center 
+ ~/ mo19 md19 - number of single family detached units
+ ~/ mo20 md20 - number of townhouses (single family attached)
+ ~/ mo21 md21 - number of garden apartment units
+ ~/ mo22 md22 - number of high-rise apartment units
+ ~/ mo30 md30 - distance of centroid to Rail Station
+ ~/ mo76 md76 - gross floor area of commercial land use
+ ~/ mo77 md77 - land use code:
+ ~/     111 - single family detached (ITE 210)
+ ~/     112 - townhouse (rental) (ITE 224)
+ ~/     113 - garden (rental) (ITE 221)
+ ~/     114 - townhouse (condo) (ITE 230)
+ ~/     115 - cooperative
+ ~/     116 - townhouse (fee simple) (ITE 230)
+ ~/     117 - hirise (rental) (ITE 222,223)
+ ~/     118 - garden (condo) (ITE 231)
+ ~/     119 - hirise (condo) (ITE 232)
+ ~/     121 - rooming and boarding houses
+ ~/     122 - membership lodgings (ITE 591)
+ ~/     123 - dormitory 
+ ~/     124 - retirement homes and orphanages (ITE 250)
+ ~/     125 - religous quarters 
+ ~/     126 - nursing homes (ITE 620)
+ ~/     127 - hospitals (ITE 610)
+ ~/     140 - mobile homes (ITE 240)
+ ~/     151 - hotels (ITE 310)
+ ~/     200 - ind park (ITE 130)
+ ~/     201 - ind prod, multi-occ - mixed industrial (ITE 140)
+ ~/     202 - ind prod, multi-occ - mixed industrial (condo) (ITE 140)
+ ~/     203 - ind prod - single industrial use (fee simple)  (ITE 140)
+ ~/     204 - ind prod - single industrial use (condo)  (ITE 140)
+ ~/     205 - mixed industrial/commercial (ITE 110)
+ ~/     206 - mixed light industrial - single occupancy (condo) (ITE 110)
+ ~/     207 - research and development (ITE 760)
+ ~/     400 - Transportation
+ ~/     431 - airports and flying fields (ITE 021)
+ ~/     460 - Surface Parking
+ ~/     461 - Surface Parking (Temporary)
+ ~/     462 - Structured Parking 
+ ~/     463 - Parking (condo)
+ ~/     470 - Communication
+ ~/     480 - Utility (ITE 170)
+ ~/     501 - Regional Shopping Center (ITE 820) MCPD
+ ~/     502 - subregional shopping (ITE 820) MCPD
+ ~/     503 - convenience center with grocery or drug store (ITE 820) MCPD
+ ~/     504 - highway commercial (not covered elsewhere) (ITE 820) MCPD
+ ~/     519 - Wholesale (non-warehouse) (ITE 860)
+ ~/     521 - Lumber and Other Building Materials (ITE 816)
+ ~/     531 - Department Store (ITE 820)
+ ~/     541 - Groceries Retail (ITE 850)
+ ~/     551 - Car Sales (ITE 841)
+ ~/     553 - Gas Station (ITE 844)
+ ~/     559 - Other Automotive Retail  (ITE 840)
+ ~/     580 - Fast Food (ITE 833) - MCPD
+ ~/     581 - Eating and Drinking (ITE 831)
+ ~/     599 - Other Retail Trade and Service -- Consumer Oriented
+ ~/     600 - Multi Tenant Office (ITE 710) MCPD
+ ~/     601 - Multi Tenant Office (condo) (ITE 710) MCPD
+ ~/     602 - Single Tenant Office (ITE 710) MCPD
+ ~/     603 - Single Tenant Office (condo) (ITE 710) MCPD
+ ~/     604 - Mixed Office and Retail (ITE 710) MCPD
+ ~/     605 - Mixed Office and Retail (condo) (ITE 710) MCPD
+ ~/     637 - Warehouse Storage Facilities (ITE 150)
+ ~/     639 - Mini Storage Facilities (ITE 151)
+ ~/     641 - Automobile Repair (ITE 840)
+ ~/     651 - Health Service Facility (ITE 630)
+ ~/     653 - Health Service Facility (condo) (ITE 630)
+ ~/     671 - General Government (ITE 730)
+ ~/     672 - Police Fire Civil Defense 
+ ~/     673 - Postal Service (ITE 732)
+ ~/     674 - Correctional Institution (ITE 571)
+ ~/     675 - Military Bases (ITE 501)
+ ~/     681 - Schools: Nursery Primary and Secondary Education (ITE 520,521,530)
+ ~/     682 - Schools: University, College, Professional (ITE 540,550)
+ ~/     691 - Religious Activities (church, synagoge) (ITE 560,561)
+ ~/     692 - Cemetaries (ITE 566)
+ ~/     711 - Cultural Activities (library, museum, gallery) (ITE 590)
+ ~/     721 - Entertainment Assembly (theaters) (ITE 444)
+ ~/     722 - Sports Assembly (stadium, arena) (ITE 460)
+ ~/     723 - Public Assembly (auditorium) (ITE 460)
+ ~/     731 - Fairgrounds and Amusement Parks (ITE 480)
+ ~/     739 - Other Amusements (miniature golf) (ITE 494)
+ ~/     740 - Private Open Space (ITE 412)
+ ~/     741 - Sports Activity (golf course, tennis) (ITE 491)
+ ~/     742 - Playgrounds and Fields (ITE 412)
+ ~/     743 - Swimming (ITE 493)
+ ~/     761 - Parks and General Recreation (ITE 412)
+ ~/     790 - Other Cultural, Entertainment and Recreational  (ITE 412)
+ ~/     812 - Farms - Crops
+ ~/     815 - Farms - Dairy
+ ~/     816 - Farms - Livestock
+ ~/     818 - Farms - General
+ ~/     839 - Forestry
+ ~/     850 - Mining and Related Service
+ ~/     890 - Other Resource Production
+ ~/     910 - Vacant
+ ~/     930 - Water Areas
+ ~/     990 - Undevelopable
+ ~/
+ ~/
+ ~/ ##############################
+ ~/ ORIGINS
+ ~/ ##############################
+ 1         /matrix calculations
+ y            /save
+ mo19
+ y        /change header
+ sinfam
+ Single Family Homes
+ y            /initialize
+ 0         /default
+ ~/ mo19 = single family
+ ~/ mo20 = townhouse
+ ~/ mo21 = garden apartment
+ ~/ mo22 = high rise
+ ~/ mo23 = single family vector
+ ~/ mo33 = census block hhs
+ ~/     111 - single family detached (ITE 210)
+ mo33*mo23+mo75*((mo77.eq.111))
+
+           /constraint matrix
+ n         /submatrix
+ 1         /matrix calculations
+ y            /save
+ mo20
+ y        /change header
+ townh
+ Town Homes
+ y            /initialize
+ 0         /default
+ ~/ mo20 = townhouse
+ ~/     112 - townhouse (rental) (ITE 224)
+ ~/     114 - townhouse (condo) (ITE 230)
+ ~/     116 - townhouse (fee simple) (ITE 230)
+ mo75*((mo77.eq.112)+(mo77.eq.114)+(mo77.eq.116))
+
+           /constraint matrix
+ n         /submatrix
+ 1         /matrix calculations
+ y            /save
+ mo21
+ y        /change header
+ garden
+ Garden Apartment
+ y            /initialize
+ 0         /default
+ ~/ mo21 = garden apartment
+ ~/ mo23 = single family vector
+ ~/     113 - garden (rental) (ITE 221)
+ ~/     118 - garden (condo) (ITE 231)
+ mo75*((mo77.eq.113)+(mo77.eq.118))
+
+           /constraint matrix
+ n         /submatrix
+ 1         /matrix calculations
+ y            /save
+ mo22
+ y        /change header
+ HIRISE
+ High Rise Apartment
+ y            /initialize
+ 0         /default
+ ~/ mo22 = high rise
+ ~/ mo23 = single family vector
+ ~/ mo33 = census block hhs
+ ~/     115 - cooperative
+ ~/     117 - hirise (rental) (ITE 222,223)
+ ~/     119 - hirise (condo) (ITE 232)
+ mo33*(1-mo23)+mo75*((mo77.eq.115)+(mo77.eq.117)+(mo77.eq.119))
+
+           /constraint matrix
+ n         /submatrix
+ 1         /matrix calculations
+ y            /save
+ mo01
+ y        /change header
+ TRIPSO
+ Trips Originating in Zone
+ y            /initialize
+ 0         /default
+ ~/ mo19 = single family
+ ~/ mo20 = townhouse
+ ~/ mo21 = garden apartment
+ ~/ mo22 = high rise
+ ~/     121 - rooming and boarding houses
+ ~/     122 - membership lodgings (ITE 591)
+ ~/     123 - dormitory 
+ ~/     124 - retirement homes and orphanages (ITE 250)
+ ~/     125 - religous quarters 
+ ~/     126 - nursing homes (ITE 620)
+ ~/     127 - hospitals (ITE 610)
+ ~/     140 - mobile homes (ITE 240)
+ ~/     151 - hotels (ITE 310)
+ ((mo19*1.11)*(mo19.le.75)+(mo19*0.82+21)*(mo19.gt.75))*0.38 
+ +((mo20*0.83)*(mo20.le.100)+(mo20*0.48+35)*(mo20.gt.100))*0.41
+ +((mo21*0.48)*(mo21.le.75)+(mo21*0.47+1)*(mo21.gt.75))*0.41
+ +((mo22*0.46)*(mo22.le.100)+(mo22*0.34+12)*(mo22.gt.100))*0.38
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n        /change header
+ ~/     502 - subregional shopping (ITE 820) MCPD
+ ~/     503 - convenience center with grocery or drug store (ITE 820) MCPD
+ ~/     541 - Groceries Retail (ITE 850)
+ mo01+
+ ((mo76/1000)*(9.96)*(mo76.lt.50000)+
+ (618+((mo76-50000)/1000)*(7.43))*(mo76.ge.50000))*
+ ((mo77.eq.502)+(mo77.eq.503)+(mo77.eq.541))*(0.53)
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n        /change header
+ ~/     504 - highway commercial (not covered elsewhere) (ITE 820) MCPD
+ ~/     531 - Department Store (ITE 820)
+ ~/     599 - Other Retail Trade and Service -- Consumer Oriented
+ mo01+
+ (((0.95)*(mo76/1000)*(9.96)+(0.2)*(200-(mo76/1000))*(mo76.lt.50000))+
+ (618+(0.95)*((mo76-50000)/1000)*(7.43)+
+ (0.2)*(200-(mo76/1000))))*(mo76.ge.50000)
+ *((mo77.eq.504)+(mo77.eq.531)+(mo77.eq.599))*(0.53)
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n        /change header
+ ~/     501 - Regional Shopping Center (ITE 820) MCPD
+ mo01+(3.0)*(mo76/1000)*(mo77.eq.501)*(0.53)
+  
+                 /constraint matrix
+ n
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n        /change header
+ ~/     519 - Wholesale (non-warehouse) (ITE 860)
+ ~/     521 - Lumber and Other Building Materials (ITE 816)
+ ~/     551 - Car Sales (ITE 841)
+ ~/     553 - Gas Station (ITE 844)
+ ~/     559 - Other Automotive Retail  (ITE 840)
+ mo01+ 
+ (0.52)*(mo76/1000)*(mo77.eq.519)*(0.50)+
+ (4.87)*(mo76/1000)*(mo77.eq.521)*(0.54)+
+ (2.62)*(mo76/1000)*(mo77.eq.551)*(0.59)+
+ (81.95)*(mo76/1000)*(mo77.eq.553)*(0.50)+
+ (2.87)*(mo76/1000)*(mo77.eq.559)*(0.54)
+
+             /constraint
+ n           /submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n
+ ~/     580 - Fast Food (ITE 833) - MCPD
+ ~/     581 - Eating and Drinking (ITE 831)
+ ~/     637 - Warehouse Storage Facilities (ITE 150)
+ ~/     639 - Mini Storage Facilities (ITE 151)
+ ~/     641 - Automobile Repair (ITE 840)
+ ~/     651 - Health Service Facility (ITE 630)
+ ~/     653 - Health Service Facility (condo) (ITE 630)
+ mo01+(34.32)*(mo76/1000)*(mo77.eq.580)*(0.45)+
+ (7.66)*(mo76/1000)*(mo77.eq.581)*(0.30)+
+ (0.74)*(mo76/1000)*(mo77.eq.637)*(0.65)+
+ (0.26)*(mo76/1000)*(mo77.eq.639)*(0.48)+
+ (2.87)*(mo76/1000)*(mo77.eq.641)*(0.54)+
+ (4.08)*(mo76/1000)*((mo77.eq.651)+(mo77.eq.653))*(0.70)
+
+
+ n        /
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n        /change header
+ ~/     600 - Multi Tenant Office (ITE 710) MCPD
+ ~/     601 - Multi Tenant Office (condo) (ITE 710) MCPD
+ ~/     602 - Single Tenant Office (ITE 710) MCPD
+ ~/     603 - Single Tenant Office (condo) (ITE 710) MCPD
+ ~/     604 - Mixed Office and Retail (ITE 710) MCPD
+ ~/     605 - Mixed Office and Retail (condo) (ITE 710) MCPD
+ mo01
+ +((((mo76/1000)*2.24)*(mo76.lt.25000) + 
+ ((mo76/1000)*0.92 + 50)*(mo76.ge.25000)*(mo76.lt.300000)+
+ ((mo76/1000)*0.92 + 140)*(mo76.ge.300000))
+ *(1-(0.40)*((1000-mo30)/1000)*(mo30.le.1000))
+ *((mo77.eq.600)+(mo77.eq.601)+(mo77.eq.602)+(mo77.eq.603)+
+ (mo77.eq.604)+(mo77.eq.605))*(0.82))*mo07
+
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n        /change header
+ ~/     200 - ind park (ITE 130)
+ ~/     201 - ind prod, multi-occ - mixed industrial (ITE 140)
+ ~/     202 - ind prod, multi-occ - mixed industrial (condo) (ITE 140)
+ ~/     203 - ind prod - single industrial use (fee simple)  (ITE 140)
+ ~/     204 - ind prod - single industrial use (condo)  (ITE 140)
+ ~/     205 - mixed industrial/commercial (ITE 110)
+ ~/     206 - mixed light industrial - single occupancy (condo) (ITE 110)
+ ~/     207 - research and development (ITE 760)
+ mo01
+ +((0.75)*(mo76/1000)*(0.47)*((mo77.ge.200)*(mo77.le.204))
+ +(0.98)*(mo76/1000)*(0.88)*((mo77.ge.205)*(mo77.le.206))
+ +(1.07)*(mo76/1000)*(0.85)*(mo77.eq.207))*(mo07)
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/ ##############################
+ ~/ DESTINATIONS
+ ~/ ##############################
+ 1         /matrix calculations
+ y            /save
+ md19
+ y        /change header
+ sinfam
+ Single Family Homes
+ y            /initialize
+ 0         /default
+ ~/ md19 = single family
+ ~/ md23 = single family vector
+ ~/ mo33 = census block houses
+ ~/     111 - single family detached (ITE 210)
+ mo33'*mo23'+mo75'*((mo77'.eq.111))
+
+           /constraint matrix
+ n         /submatrix
+ 1         /matrix calculations
+ y            /save
+ md20
+ y        /change header
+ townh
+ Town Homes
+ y            /initialize
+ 0         /default
+ ~/ md20 = townhouse
+ ~/     112 - townhouse (rental) (ITE 224)
+ ~/     114 - townhouse (condo) (ITE 230)
+ ~/     116 - townhouse (fee simple) (ITE 230)
+ mo75'*((mo77'.eq.112)+(mo77'.eq.114)+(mo77'.eq.116))
+
+           /constraint matrix
+ n         /submatrix
+ 1         /matrix calculations
+ y            /save
+ md21
+ y        /change header
+ garden
+ Garden Apartment
+ y            /initialize
+ 0         /default
+ ~/ mo21 = garden apartment
+ ~/ mo23 = single family vector
+ ~/     113 - garden (rental) (ITE 221)
+ ~/     118 - garden (condo) (ITE 231)
+ mo75'*((mo77'.eq.113)+(mo77'.eq.118))
+
+           /constraint matrix
+ n         /submatrix
+ 1         /matrix calculations
+ y            /save
+ md22
+ y        /change header
+ HIRISE
+ High Rise Apartment
+ y            /initialize
+ 0         /default
+ ~/ mo22 = high rise
+ ~/ mo23 = single family vector
+ ~/ mo33 = census block houses
+ ~/     115 - cooperative
+ ~/     117 - hirise (rental) (ITE 222,223)
+ ~/     119 - hirise (condo) (ITE 232)
+ mo33'*(1-mo23')+mo75'*((mo77'.eq.115)+(mo77'.eq.117)+(mo77'.eq.119))
+
+           /constraint matrix
+ n         /submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md01
+ y        /change header
+ TRIPSO
+ Trips Originating in Zone
+ y            /initialize
+ 0         /default
+ ~/     121 - rooming and boarding houses
+ ~/     122 - membership lodgings (ITE 591)
+ ~/     123 - dormitory 
+ ~/     124 - retirement homes and orphanages (ITE 250)
+ ~/     125 - religous quarters 
+ ~/     126 - nursing homes (ITE 620)
+ ~/     127 - hospitals (ITE 610)
+ ~/     140 - mobile homes (ITE 240)
+ ~/     151 - hotels (ITE 310)
+ ((md19*1.11)*(md19.le.75)+(md19*0.82+21)*(md19.gt.75))*0.62 
+ +((md20*0.83)*(md20.le.100)+(md20*0.48+35)*(md20.gt.100))*0.59
+ +((md21*0.48)*(md21.le.75)+(md21*0.47+1)*(md21.gt.75))*0.59
+ +((md22*0.46)*(md22.le.100)+(md22*0.34+12)*(md22.gt.100))*0.62
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ ~/     502 - subregional shopping (ITE 820) MCPD
+ ~/     503 - convenience center with grocery or drug store (ITE 820) MCPD
+ ~/     541 - Groceries Retail (ITE 850)
+ md01+
+ ((mo76'/1000)*(9.96)*(mo76'.lt.50000)+
+ (618+((mo76'-50000)/1000)*(7.43))*(mo76'.ge.50000))*
+ ((mo77'.eq.502)+(mo77'.eq.503)+(mo77'.eq.541))*(0.47)
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ ~/     504 - highway commercial (not covered elsewhere) (ITE 820) MCPD
+ ~/     531 - Department Store (ITE 820)
+ ~/     599 - Other Retail Trade and Service -- Consumer Oriented
+ md01+
+ (((0.95)*(mo76'/1000)*(9.96)+(0.2)*(200-(mo76'/1000))*(mo76'.lt.50000))+
+ (618+(0.95)*((mo76'-50000)/1000)*(7.43)+
+ (0.2)*(200-(mo76'/1000))))*(mo76'.ge.50000)
+ *((mo77'.eq.504)+(mo77'.eq.531)+(mo77'.eq.599))*(0.47)
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ ~/     501 - Regional Shopping Center (ITE 820) 
+ md01+(3.0)*(mo76'/1000)*(mo77'.eq.501)*(0.47)
+  
+                 /constraint matrix
+ n
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ ~/     519 - Wholesale (non-warehouse) (ITE 860)
+ ~/     521 - Lumber and Other Building Materials (ITE 816)
+ ~/     551 - Car Sales (ITE 841)
+ ~/     553 - Gas Station (ITE 844)
+ ~/     559 - Other Automdtive Retail  (ITE 840)
+ ~/     580 - Fast Food (ITE 833) - MCPD
+ ~/     581 - Eating and Drinking (ITE 831)
+ ~/     637 - Warehouse Storage Facilities (ITE 150)
+ ~/     639 - Mini Storage Facilities (ITE 151)
+ ~/     641 - Automdbile Repair (ITE 840)
+ ~/     651 - Health Service Facility (ITE 630)
+ ~/     653 - Health Service Facility (condo) (ITE 630)
+ md01+ 
+ (0.52)*(mo76'/1000)*(mo77'.eq.519)*(0.50)+
+ (4.87)*(mo76'/1000)*(mo77'.eq.521)*(0.46)+
+ (2.62)*(mo76'/1000)*(mo77'.eq.551)*(0.41)+
+ (81.95)*(mo76'/1000)*(mo77'.eq.553)*(0.50)+
+ (2.87)*(mo76'/1000)*(mo77'.eq.559)*(0.46)
+
+             /constraint
+ n           /submatrix
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ ~/     580 - Fast Food (ITE 833) - MCPD
+ ~/     581 - Eating and Drinking (ITE 831)
+ ~/     637 - Warehouse Storage Facilities (ITE 150)
+ ~/     639 - Mini Storage Facilities (ITE 151)
+ ~/     641 - Automobile Repair (ITE 840)
+ ~/     651 - Health Service Facility (ITE 630)
+ ~/     653 - Health Service Facility (condo) (ITE 630)
+ md01+
+ (34.32)*(mo76'/1000)*(mo77'.eq.580)*(0.55)+
+ (7.66)*(mo76'/1000)*(mo77'.eq.581)*(0.70)+
+ (0.74)*(mo76'/1000)*(mo77'.eq.637)*(0.35)+
+ (0.26)*(mo76'/1000)*(mo77'.eq.639)*(0.52)+
+ (2.87)*(mo76'/1000)*(mo77'.eq.641)*(0.46)+
+ (4.08)*(mo76'/1000)*((mo77'.eq.651)+(mo77'.eq.653))*(0.30)
+
+
+ n        /submatrix
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ ~/     600 - Multi Tenant Office (ITE 710) MCPD
+ ~/     601 - Multi Tenant Office (condo) (ITE 710) MCPD
+ ~/     602 - Single Tenant Office (ITE 710) MCPD
+ ~/     603 - Single Tenant Office (condo) (ITE 710) MCPD
+ ~/     604 - Mixed Office and Retail (ITE 710) MCPD
+ ~/     605 - Mixed Office and Retail (condo) (ITE 710) MCPD
+ md01
+ +((((mo76'/1000)*2.24)*(mo76'.lt.25000) + 
+ ((mo76'/1000)*0.92 + 50)*(mo76'.ge.25000)*(mo76'.lt.300000)+
+ ((mo76'/1000)*0.92 + 140)*(mo76'.ge.300000))
+ *(1-(0.40)*((1000-md30)/1000)*(md30.le.1000))
+ *((mo77'.eq.600)+(mo77'.eq.601)+(mo77'.eq.602)+(mo77'.eq.603)+
+ (mo77'.eq.604)+(mo77'.eq.605))*(0.18))*(md07)
+
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ ~/     200 - ind park (ITE 130)
+ ~/     201 - ind prod, multi-occ - mixed industrial (ITE 140)
+ ~/     202 - ind prod, multi-occ - mixed industrial (condo) (ITE 140)
+ ~/     203 - ind prod - single industrial use (fee simple)  (ITE 140)
+ ~/     204 - ind prod - single industrial use (condo)  (ITE 140)
+ ~/     205 - mixed industrial/commercial (ITE 110)
+ ~/     206 - mixed light industrial - single occupancy (condo) (ITE 110)
+ ~/     207 - research and development (ITE 760)
+ md01
+ +((0.75)*(mo76'/1000)*(0.53)*((mo77'.ge.200)*(mo77'.le.204))
+ +(0.98)*(mo76'/1000)*(0.12)*((mo77'.ge.205)*(mo77'.le.206))
+ +(1.07)*(mo76'/1000)*(0.15)*(mo77'.eq.207))*(md07)
+
+
+ n
+ q

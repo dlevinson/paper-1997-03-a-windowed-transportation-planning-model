@@ -1,0 +1,1 @@
+BEGIN {}# awk to match DA file with CT file# (DATA and CENTROID COORDINATE)# DML 4.24.92FILENAME=="DAVID_CT.BCC" {	 inode=$1	 xcoor[inode]=$2	 ycoor[inode]=$3}FILENAME=="DAVID_DA.BCC" {	 inode=$1	 ui1=$2	 ui2=$3	 ui3=$4	 print "a ",inode,xcoor[inode],ycoor[inode],ui1,ui2,ui3}

@@ -1,0 +1,22 @@
+ ~/ t.disttran
+ ~/ macro to balance otrips and dtrips into trip table
+ ~/ usage: emme2 clear 322 batch -m "t.disttran"
+ ~/ DML 10.3.91 12.7.92
+ ~/
+ ~/ MATRIX BALANCING TRANSIT TRIPS
+ ~/
+ 1         /matrix two-dimensional balancing
+ mf06
+ mo09
+ md09
+ n           /no submatrix
+             /constraint matrix
+ ~/ save balanced matrix and balancing coefficients
+ 2           /save balanced matrix and balancing coefficients
+ mf07
+ y          /change header
+ TRTRIP
+ Transit Trip Table (balanced)
+ y        /initialize
+ 0
+ q           /quit

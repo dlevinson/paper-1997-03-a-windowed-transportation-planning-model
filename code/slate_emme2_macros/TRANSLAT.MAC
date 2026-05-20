@@ -1,0 +1,185 @@
+ ~/ t.transLATR
+ ~/ transpose matrices in SLATE databank
+ ~/ DML 2.27.92
+ ~/ usage: emme2 clear 312 batch -m "t.transLATR"
+ 4        /copy a matrix
+ 3       /transpose
+ mo19
+ md19
+ y
+ sfhous
+ Single Family Detached Houses
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo20
+ md20
+ y
+ townh
+ Single Family Attached Houses
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo21
+ md21
+ y
+ garden
+ Garden Apartment
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo22
+ md22
+ y
+ hirise
+ High Rise Apartment
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo30
+ md30
+ y
+ mdist
+ Distance of Zone Centroid to METRO
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo31
+ md31
+ y
+ cbarea
+ Census Block Area
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo32
+ md32
+ y
+ zoneid
+ NEWERTZ ZONE ID
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo33
+ md33
+ y
+ houses
+ Houses by Census Block from TIGER
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo60
+ md60
+ y
+ cblkid
+ Census Block Identification #
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo61
+ md61
+ y
+ sblkid
+ Census Sub Block Identification #
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo62
+ md62
+ y
+ taxact
+ Tax Account Identification #
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo63
+ md63
+ y
+ oldzon
+ Old Traffic Zone Identification #
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo64
+ md64
+ y
+ subzon
+ MPAS Traffic Zone Identification #
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo65
+ md65
+ y
+ parsiz
+ Parcel Size in Square Feet
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo66
+ md66
+ y
+ gfarea
+ Gross Floor Area in Square Feet
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo67
+ md67
+ y
+ landus
+ Land Use Category
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo68
+ md68
+ y
+ nowfar
+ Current Floor to Area Ratio
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo69
+ md69
+ y
+ futfar
+ Future Floor to Area Ratio
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo70
+ md70
+ y
+ nowhhs
+ Current Housing Units in Parcels
+ y
+ 0
+ 4        /copy a matrix
+ 3       /transpose
+ mo71
+ md71
+ y
+ pothhs
+ Potential Additional Housing Units
+ y
+ 0
+ q

@@ -1,0 +1,27 @@
+ EMME/2 Module: 2.31          Date: 93 03 12           User: E055/MNChPC....BAT           Page:*****
+ Project: §Cethesda Staging Analysis 
+ Scenario 9619: Ceth CBD Ph 1B with 0.5 pipeline, TDM and intrsctn imps 
+ ---------------------------------------------------------------------------------------------------
+
+    1: t turns init                                                                    
+ Turn penalty table initialized
+
+ 1530: a  16968  10764 100230      1     0.258160     1.000000    21.000000
+ Turn penalty input error  18!
+
+ 1532: a  16968  10774 100230      1     0.172107     1.500000    21.000000
+ Turn penalty input error  18!
+
+ 1544: a  16969 100230  16782      1     0.314400     0.294582    23.138796
+ Turn penalty input error  19!
+
+ 1545: a  16969 100230  16800      1     0.262586     0.352709    23.138796
+ Turn penalty inputioror or  19!
+
+ 1546: a  16969 100230  16979      1     0.262586     0.352709    23.138796
+ Turn penalty input error  19!
+
+
+
+  2635 turn cards processed, error count=    5
+

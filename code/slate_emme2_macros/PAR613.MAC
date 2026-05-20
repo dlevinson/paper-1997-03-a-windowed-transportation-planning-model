@@ -1,0 +1,12 @@
+ ~/613 compare auto times and volumes
+ 6           /change module parameters
+ 1,1         /width height of nodes without node number
+ 4,4         /width height of nodes with node number
+ 0           /offset to right for links
+ 4           /character height
+ y           /plot nodes only if connected
+ .2          /hatch width
+ 2,3         /color indices
+ y           /save
+ 7           /end 613
+ 9           /end emme2

@@ -1,0 +1,10 @@
+ ~/ t.copycap
+ ~/ macro to copy capacity from another scenario to current scenario
+ ~/ usage: emme2 clear 241 batch -m "t.copycap $scencap"
+ ~/ DML 5.6.92
+ 2            /copy attribute from another scenario
+ %1%          /copy attribute from scenario %1%
+ ul2          /attribute: capacity stored in ul2
+ ul2          /attribute of current scenario to save result
+ all          /link types
+ q

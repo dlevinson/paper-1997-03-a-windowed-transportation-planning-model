@@ -1,0 +1,8 @@
+ ~/615 plot shortest paths on auto network
+ 3           /change module parameters
+ 1,1         /width height without node numbers
+ 4,4         /width height with node numbers
+ 0           /offset to right for links
+ y           /save on disk
+ 4           /end
+ 9           /end emme2

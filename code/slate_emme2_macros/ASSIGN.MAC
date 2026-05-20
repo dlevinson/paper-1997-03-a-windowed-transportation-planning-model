@@ -1,0 +1,21 @@
+ ~/ t.assignment
+ ~/ macro to prepare for assignment
+ ~/ usage: emme2 clear 511 batch -m "t.assignment %1%"
+ ~/ DML 10.3.91
+ 1            /fixed demand auto assignment
+ ~?q=2
+ 2            /new assignment
+ 1            /no additional volumes
+ mf03         /auto demand
+              /auto occupancy
+              /additional demand
+ mf02         /auto times
+ y            /change header
+ timout
+ Output Travel Time from Assignment
+ y
+ 0
+ %1%            /iterations
+ -999999         /stopping criteria
+ -999999         /stopping criteria
+ 9

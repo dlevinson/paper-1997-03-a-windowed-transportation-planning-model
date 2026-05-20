@@ -1,0 +1,20 @@
+ ~/ t.spdadj2
+ ~/ macro to adjust freeflow speed by ratio of new to old volume
+ ~/ usage: emme2 clear 241 batch -m "t.spdadj2"
+ ~/ where volau = old trip table assigned volumes
+ ~/       volad = new trip table assigned volumes 
+ ~/               from Heinz Spiess demand adjustment algorithm
+ ~/       ul1   = freeflow speed
+ ~/ DML 5.5.92
+ 1              /network calculations
+ y              /save result
+ ul1            /capacity
+ 0.5*ul1+((0.5*ul1*volad/volau).max.15).min.75
+  
+ volau=1,999999
+ &volad=1,999999
+ &ul1=10,75
+
+ 4           /none report
+ q
+ q

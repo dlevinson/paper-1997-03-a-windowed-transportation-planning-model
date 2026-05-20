@@ -1,0 +1,16 @@
+ ~/ t.copyfile 42
+ ~/ DML 1/24/91
+ ~/ copies file 41 (Definitions for Turns) from Dummy Scenario
+ ~/ to Scenario that is being iterated (without losing assignment)
+ ~/ be very cautious about files,records and ranges
+ ~/ both scenarios must be prepped for assignment
+ ~/ range is 1,20000 ( maximum number of turns allowed)
+ ~/
+ ~/ usage emme2 clear 111 batch -m "t.copyfile41"
+ 4           /module 111 copy compare combine data
+ 1           /copy source and destination
+ 41,-1,1,20000
+ 41,-%1%,1,20000
+ 4          /back to primary select
+ 8           /end
+ 9

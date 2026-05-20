@@ -1,0 +1,63 @@
+ ~/ t.distribute3
+ ~/ macro to balance otrips and dtrips into trip table
+ ~/ usage: emme2 clear 322 batch -m "t.distribute3"
+ ~/ DML 10.3.91
+ ~/
+ ~/ MATRIX BALANCING WORK TRIPS
+ ~/
+ 1         /matrix two-dimensional balancing
+ mf01
+ mo17
+ md17
+ n           /no submatrix
+             /constraint matrix
+ ~/ save balanced matrix and balancing coefficients
+ 3           /save balanced matrix and balancing coefficients
+ mf04
+ y          /change header
+ ODTRIP
+ O-D Trip Table (balanced)
+ y        /initialize
+ 0
+ mo04
+ y
+ balcoe
+ Origin Balancing Coefficients
+ y
+ 0
+ md04
+ y
+ balcoe
+ Destination Balancing Coefficients
+ y
+ 0
+ ~/
+ ~/ MATRIX BALANCING NONWORK TRIPS
+ ~/
+ 1         /matrix two-dimensional balancing
+ mf02
+ mo18
+ md18
+ n           /no submatrix
+             /constraint matrix
+ ~/ save balanced matrix and balancing coefficients
+ 3           /save balanced matrix and balancing coefficients
+ mf05
+ y          /change header
+ NWODTR
+ O-D Non-Work Trip Table (balanced)
+ y        /initialize
+ 0
+ mo04
+ y
+ balcoe
+ Origin Balancing Coefficients
+ y
+ 0
+ md04
+ y
+ balcoe
+ Destination Balancing Coefficients
+ y
+ 0
+ q           /quit

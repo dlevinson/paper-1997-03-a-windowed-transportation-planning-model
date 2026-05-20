@@ -1,0 +1,39 @@
+ ~/ t.plotdiff
+ ~/ plot simulated - obsevered volume
+ ~/ DML 8/8/91
+ ~/ usage: emme2 clear 213 batch -m "t.plotdiff $window"
+ 6      /users data
+ 2      /link
+ 1      /ul1 = sim-obs
+ 3      /bars and number
+ n      /color index
+ n      /nodes
+ 101 991 10
+ 102 992 10
+ 103 993 10
+ 104 994 10
+ 108 998 10
+  
+ y            /window
+ 4
+ %1%
+ ~/ scale
+ 1000
+ ~/ demarcations and annotations
+ 4,5         
+ ~/ now plot base network
+ ~/ 1           /base network
+ ~/ n           /no color
+ ~/ y           /no node numbers
+ ~/ 101 991 10
+ ~/ 102 992 10
+ ~/ 103 993 10
+ ~/ 104 994 10
+ ~/ 108 998 10
+ ~/  
+ ~/ y             /yes window
+ ~/ 5             /same as before
+ ~/ demarcations and annotations
+ ~/            
+ ~/ q
+ q

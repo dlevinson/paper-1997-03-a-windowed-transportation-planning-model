@@ -1,0 +1,407 @@
+ ~/ t.normalize
+ ~/ macro to normalize productions and attractions
+ ~/ usage: emme2 clear 321 batch -m "t.normalize"
+ ~/ DML     10.3.91
+ ~/
+ ~/ mo01 md01 - Total Local Area Work & NonWork Trips Produced and Attracted
+ ~/ mo02 md02 - Total External Work & NonWork Trips Produced and Attracted
+ ~/ ms01 - sum of mo01 + mo02
+ ~/ ms02 - sum of md01 + md02
+ ~/ mo03 md03 - Total Trips Vectors normalized to max of P or A
+ ~/ mo05 md05 - adjustment of external stations from traversal
+ ~/ mo06 md06 - Vehicle Trips Off Road
+ ~/ GIVEN  -----------------------------------------------------------
+ ~/ mo08 md08 - Local Area Household Trips Produced and Attracted
+ ~/ mo09 md09 - Local Area Work Trips Produced and Attracted
+ ~/ mo10 md10 - Local Area NonWork Trips Produced and Attracted
+ ~/ mo11 md11 - External Work Trips Produced and Attracted
+ ~/ mo12 md12 - External NonWork Trips Produced and Attracted
+ ~/ CALCULATE --------------------------------------------------------
+ ~/ mo15 md15 - Household Work Trips Produced and Attracted 
+ ~/ mo16 md16 - Household NonWork Trips Produced and Attracted 
+ ~/ mo17 md17 - Total Work Trips Produced and Attracted 
+ ~/ mo18 md18 - Total NonWork Trips Produced and Attracted 
+ ~/ ms03 = mo09+mo11 ( Total Work Ends Origin, excl HH)
+ ~/ ms04 = mo10+mo12 ( Total NonWork Ends Origin, excl HH)
+ ~/ ms05 = md09+md11 ( Total Work Ends Destin, excl HH)
+ ~/ ms06 = md10+md12 ( Total NonWork Ends Destin, excl HH)
+ ~/
+ ~/ compute sum of originations
+ 1        /matrix calculations
+ y          /save
+ ms03
+ y
+ origWK
+ Sum of Work Origins
+ y
+ 0
+ mo09+(mo11/mo05)*(mo05.gt.0)+0.001
+  
+                  /constraint
+ n             /submatrix
+ +           /aggregation by origin
+ ~/ compute sum of originations
+ 1        /matrix calculations
+ y          /save
+ ms04
+ y
+ origNW
+ Sum of NonWork Origins
+ y
+ 0
+ (mo10)*(0.58)+(mo12/mo05)*(mo05.gt.0)+0.0001
+  
+                  /constraint
+ n             /submatrix
+ +           /aggregation by origin
+ ~/ compute sum of destinations
+ 1        /matrix calculations
+ y          /save
+ ms05
+ y
+ destWK
+ Sum of Work Destinations
+ y
+ 0
+ md09+(md11/md05)*(md05.gt.0)+0.0001
+  
+                  /constraint
+ n             /submatrix
+ +           /aggregation by dest
+ ~/ compute sum of destinations
+ 1        /matrix calculations
+ y          /save
+ ms06
+ y
+ destNW
+ Sum of NonWork Destinations
+ y
+ 0
+ (md10)*(0.58)+(md12/md05)*(md05.gt.0)+0.0001
+  
+                  /constraint
+ n             /submatrix
+ +           /aggregation by dest
+ ~/ compute origins
+ 1             /matrix calculations
+ y             /save
+ mo01
+ y
+ otrips
+ Origin Trips
+ y
+ 0
+ mo08+mo09+(mo10)*(0.58)
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute external origins
+ 1             /matrix calculations
+ y             /save
+ mo02
+ y
+ extrip
+ External Trips 
+ y
+ 0
+ mo11+mo12+0.0001
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute destins
+ 1             /matrix calculations
+ y             /save
+ md01
+ y
+ dtrips
+ Destin Trips
+ y
+ 0
+ md08+md09+(md10)*(0.58)
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute external destinations
+ 1             /matrix calculations
+ y             /save
+ md02
+ y
+ extrip
+ External Trips 
+ y
+ 0
+ md11+md12+0.0001
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute
+ 1             /matrix calculations
+ y             /save
+ mo13
+ y
+ nothin
+ NOTHING
+ y
+ 0
+ 0
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute
+ 1             /matrix calculations
+ y             /save
+ md13
+ y
+ nothin
+ NOTHING
+ y
+ 0
+ 0
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute
+ 1             /matrix calculations
+ y             /save
+ mo14
+ y
+ nothin
+ NOTHING
+ y
+ 0
+ 0
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute 
+ 1             /matrix calculations
+ y             /save
+ md14
+ y
+ nothin
+ NOTHING
+ y
+ 0
+ 0
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute HH work origins
+ 1             /matrix calculations
+ y             /save
+ mo15
+ y
+ owhhtr
+ Origin Household Work Trips
+ y
+ 0
+ mo08*ms05/(ms05+ms06)
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute HH work origins
+ 1             /matrix calculations
+ y             /save
+ md15
+ y
+ dwhhtr
+ Destin Household Work Trips
+ y
+ 0
+ md08*ms03/(ms03+ms04)
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute HH work origins
+ 1             /matrix calculations
+ y             /save
+ mo16
+ y
+ onhhtr
+ Origin Household NonWork Trips
+ y
+ 0
+ mo08*ms06/(ms05+ms06)
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute HH work origins
+ 1             /matrix calculations
+ y             /save
+ md16
+ y
+ dnhhtr
+ Destin Household NonWork Trips
+ y
+ 0
+ md08*ms04/(ms03+ms04)
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute sum of originations
+ 1        /matrix calculations
+ y          /save
+ ms03
+ y
+ origin
+ Sum of Work Origins
+ y
+ 0
+ mo09+mo15+(mo11/mo05)*(mo05.gt.0)-mo06+0.0001
+  
+                  /constraint
+ n             /submatrix
+ +           /aggregation by origin
+ ~/ compute sum of destinations
+ 1        /matrix calculations
+ y          /save
+ ms04
+ y
+ destin
+ Sum of Work Destinations
+ y
+ 0
+ md09+md15+(md11/md05)*(md05.gt.0)-md06+0.0001
+  
+               /constraint
+ n             /submatrix
+ +             /aggregation by destin
+ ~/ compute sum of originations
+ 1        /matrix calculations
+ y          /save
+ ms05
+ y
+ origNW
+ Sum of NonWork Origins
+ y
+ 0
+ (mo10)*(0.58)+mo16+(mo12/mo05)*(mo05.gt.0)+0.0001
+  
+                  /constraint
+ n             /submatrix
+ +           /aggregation by origin
+ ~/ compute sum of destinations
+ 1        /matrix calculations
+ y          /save
+ ms06
+ y
+ destNW
+ Sum of NonWork Destinations
+ y
+ 0
+ (md10)*(0.58)+md16+(md12/md05)*(md05.gt.0)-md06+0.0001
+  
+               /constraint
+ n             /submatrix
+ +             /aggregation by destin
+ ~/ compute work origins
+ 1             /matrix calculations
+ y             /save
+ mo17
+ y
+ owhhtr
+ Origin Work Trips
+ y
+ 0
+ (mo09+mo15+(mo11/mo05)*(mo05.gt.0)-mo06)*
+ ((ms03+ms04)/(2*ms03))*((mo09+mo15+(mo11/mo05)*(mo05.gt.0)).gt.mo06)+0.0001
+  
+
+ n
+ ~/ compute nonwork origins
+ 1             /matrix calculations
+ y             /save
+ mo18
+ y
+ onhhtr
+ Origin NonWork Trips
+ y
+ 0
+ ((mo10)*(0.58)+mo16+(mo12/mo05)*(mo05.gt.0))*((ms05+ms06)/(2*ms05))+0.0001
+  
+
+ n
+ ~/ compute work destinations
+ 1             /matrix calculations
+ y             /save
+ md17
+ y
+ dwhhtr
+ Destin Work Trips
+ y
+ 0
+ (md9+md15+(md11/md05)*(md05.gt.0)-md06)*
+ (ms03+ms04)/(2*ms04)*((md09+md15+(md11/md05)*(md05.gt.0)).gt.md06)+0.0001
+  
+
+ n
+ ~/ compute nonwork destinations
+ 1             /matrix calculations
+ y             /save
+ md18
+ y
+ dnhhtr
+ Destin NonWork Trips
+ y
+ 0
+ ((md10)*(0.58)+md16+(md12/md05)*(md05.gt.0))*((ms05+ms06)/(2*ms06))+0.0001
+  
+
+ n
+ ~/ compute sum of originations
+ 1        /matrix calculations
+ y          /save
+ ms01
+ y
+ origin
+ Sum of Origins
+ y
+ 0
+ mo01+(mo02/mo05)*(mo05.gt.0)
+  
+                  /constraint
+ n             /submatrix
+ +           /aggregation by origin
+ ~/ compute sum of destinations
+ 1        /matrix calculations
+ y          /save
+ ms02
+ y
+ destin
+ Sum of  Destinations
+ y
+ 0
+ md01+(md02/md05)*(md05.gt.0)-md06
+  
+               /constraint
+ n             /submatrix
+ +             /aggregation by destin
+ ~/ compute adjusted origins
+ 1             /matrix calculations
+ y             /save
+ mo03
+ y
+ otrips
+ Origin Trips (adjusted to Destinations)
+ y
+ 0
+ (mo01+(mo02/mo05)*(mo05.gt.0))*
+ ((ms01+ms02)/(2*ms01))*((mo01+(mo02/mo05)*(mo05.gt.0)))
+  
+                 /constraint
+ n               /submatrix
+ ~/ compute adjusted destinations
+ 1             /matrix calculations
+ y             /save
+ md03
+ y
+ dtrips
+ Destination Trips (adjusted to Origins)
+ y
+ 0
+ (md01+(md02/md05)*(md05.gt.0)-md06)*
+ (ms01+ms02)/(2*ms02)*((md01+(md02/md05)*(md05.gt.0)).gt.md06)
+  
+                 /constraint
+ n               /submatrix
+ q       /quit

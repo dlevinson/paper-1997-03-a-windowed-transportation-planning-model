@@ -1,0 +1,37 @@
+ 1          /matrix calc
+ y
+ mo11
+ n          /dont change header
+ mo11*((mo11+mo12).gt.mo29) + 
+ mo29*(mo11/(mo11+mo12))*((mo11+mo12).le.mo29)
+  
+  
+ n
+ 1          /matrix calc
+ y
+ mo12
+ n          /dont change header
+ mo12*((mo11+mo12).gt.mo29) + 
+ mo29*(mo12/(mo11+mo12))*((mo11+mo12).le.mo29)
+  
+  
+ n
+ 1          /matrix calc
+ y
+ md11
+ n          /dont change header
+ md11*((md11+md12).gt.md29) + 
+ md29*(md11/(md11+md12))*((md11+md12).le.md29)
+  
+  
+ n
+ 1          /matrix calc
+ y
+ md12
+ n          /dont change header
+ md12*((md11+md12).gt.md29) + 
+ md29*(md12/(md11+md12))*((md11+md12).le.md29)
+  
+  
+ n
+ q

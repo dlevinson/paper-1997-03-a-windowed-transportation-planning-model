@@ -1,0 +1,18 @@
+ ~/ t.sumtable3
+ ~/ usage: emme2 clear 321 batch -m "t.sumtable3"
+ ~/ DML 7.9.92
+ ~/ macro to add work and nonwork trip tables
+ ~/
+ 1        /matrix calculations
+ y          /save
+ mf03
+ y
+ TRIPS
+ Sum of Work & NonWork Trip Tables
+ y
+ 0
+ mf04+mf05
+  
+                  /constraint
+ n             /submatrix
+ q

@@ -1,0 +1,1 @@
+BEGIN {}FILENAME == "d231.turnvol" {  at=$1  fr=$2  to=$3  vol=$4  obs=$4*[at*1000000 + fr + to/1000000] }FILENAME == "turnvol.in" {  at=$1  fr=$2  to=$3  vol=$4  sim=$4*[at*1000000 + fr + to/1000000]  if (obs > 0) {print $1,$2,$3,obs/sim} }END {}

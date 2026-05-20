@@ -1,0 +1,16 @@
+ 5         /mod 612 plot auto speed
+ 1         /bars
+ n        /no nodes
+ y        /auto net
+ y         /color code
+ 2
+ 101 991 10
+ 102 992 10
+ 103 993 10
+ 104 994 10
+  
+ n
+ 10           /scale factor
+  
+ 7
+ 9

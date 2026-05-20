@@ -1,0 +1,21 @@
+ ~/ t.plotwspeed
+ ~/ usage: emme2 clear 612 batch -m "t.plotwspeed $window"
+ ~/ DML 11.13.91
+ 5         /mod 612 plot auto speed
+ 1         /bars
+ n        /no nodes
+ y        /auto net
+ y         /color code
+ 2
+ 101 991 10
+ 102 992 10
+ 103 993 10
+ 104 994 10
+  
+ y            /window
+ 4
+ %1%
+ 10           /scale factor
+  
+ 7
+ 9

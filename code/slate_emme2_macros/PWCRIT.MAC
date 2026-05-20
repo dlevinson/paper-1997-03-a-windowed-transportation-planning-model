@@ -1,0 +1,36 @@
+ ~/ t.critplot
+ ~/ plot node circles of critical lane volumes
+ ~/ DML 2/11/91  8/8/91
+ ~/ usage: emme2 clear 213 batch -m "t.plotwcrit $window"
+ 6          /user defined data
+ 1          /user node data
+ 1          /ui1 has clv
+ 1          /circles
+ y
+ 2         /ui2 color
+ n         /no node numbers
+ 101 991 10
+ 102 992 10
+ 103 993 10
+ 104 994 10
+  
+ y        /window
+ 4
+ %1%
+ 10       /scale
+          /annotation and demarcations
+ ~/ now plot base network
+ 1           /base network
+ n           /no color
+ n           /no node numbers
+ 101 991 10
+ 102 992 10
+ 103 993 10
+ 104 994 10
+  
+ y             /yes window
+ 5             /same as before
+ ~/demarcations and annotations
+ 1 4 5  
+ q
+ q

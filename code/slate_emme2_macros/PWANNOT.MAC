@@ -1,0 +1,21 @@
+ ~/ t.plotwannot
+ ~/ plot annotations file
+ ~/ DML 8/8/91
+ ~/ usage: emme2 clear 213 batch -m "t.plotwannot $window $annot"
+ 6      /users data
+ 2      /link
+ 1      /ul1 = sim-obs
+ 3      /bars and number
+ y      /color index
+ 2
+ n      /nodes
+ 887    /non existant route type
+  
+ ~/y         /no window can be established
+ 4
+ %1%
+ ~/ scale
+ 2
+ ~/ demarcations and annotations
+ %2%        
+ q

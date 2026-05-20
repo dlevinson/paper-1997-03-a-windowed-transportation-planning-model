@@ -1,0 +1,1 @@
+## set $emme2 release versionset emme2=/users/emme2/rel5.2/etc/emme2cp d311.orig d311.in$emme2 clear 311 batchcp d311.alt1a d311.in$emme2 clear 311 batchslate.bcc6 9601 c > foo9601cp d311.orig d311.in$emme2 clear 311 batchcp d311.alt1b d311.in$emme2 clear 311 batchslate.bcc6 9602 d > foo9602

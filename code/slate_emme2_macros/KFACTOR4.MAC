@@ -1,0 +1,18 @@
+ ~/ t.kfactor4
+ ~/ usage: emme2 clear 321 batch -m "t.kfactor4"
+ ~/ DML 8.5.92
+ ~/ mf4=work and nonwork demand
+ ~/ mf3=kfactor
+ 1      /matcalc
+ y       /save
+ mf4
+ y
+ DEMAND
+ Demand (work and nonwork)/kfactor
+ n
+ (mf4/mf3)*(mf4.gt.0)*(mf4.lt.99999)*(mf3.gt.0)+0.0001
+  
+
+ n
+ q
+ q

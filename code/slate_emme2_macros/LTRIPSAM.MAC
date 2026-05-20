@@ -1,0 +1,346 @@
+ ~/ t.LATRtripsam
+ ~/ pm Local Area Trip Generation Rates
+ ~/ usage: emme2 clear 321 batch -m "t.LATRtripsam"
+ ~/
+ ~/ mo01 md01 - trips internal to area
+ ~/ mo02 md02 - trips external to area
+ ~/ mo03 md03 - total trips
+ ~/ mo05 md05 - external station adjustment factor
+ ~/ mo06 md06 - sq.ft. of general office less than 25000 square feet
+ ~/ mo07 md07 - sq.ft. of general office greater than 25000 square feet
+ ~/ mo08 md08 - number of general offices greater than 25000 square feet 
+ ~/ mo09 md09 - sq.ft. of single employer greater than 300000 square feet
+ ~/ mo10 md10 - number of single employer greater than 300000 square feet 
+ ~/ mo11 md11 - GLA of retail center under 50000 with food store
+ ~/ mo12 md12 - number of retail centers under 50000 with food store
+ ~/ mo13 md13 - GLA of retail center over 50000 with food store
+ ~/ mo14 md14 - number of retail centers over 50000 with food store
+ ~/ mo15 md15 - GLA of retail center under 50000 without food store
+ ~/ mo16 md16 - number of retail centers under 50000 without food store
+ ~/ mo17 md17 - GLA of retail center over 50000 without food store
+ ~/ mo18 md18 - number of retail centers over 50000 without food store
+ ~/ mo19 md19 - number of single family detached units
+ ~/ mo20 md20 - number of townhouses (single family attached)
+ ~/ mo21 md21 - number of garden apartment units
+ ~/ mo22 md22 - number of high-rise apartment units
+ ~/ mo30 md30 - distance of centroid to Rail Station
+ ~/
+ ~/ ##############################
+ ~/ TRANSPOSE LANDUSE
+ ~/ ##############################
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md06
+ y        /change header
+ OFFu25
+ Offices under 25000 square feet
+ y            /initialize
+ 0         /default
+ mo06' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md07
+ y        /change header
+ OFFo25
+ Offices over 25000 square feet
+ y            /initialize
+ 0         /default
+ mo07' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md08
+ y        /change header
+ OF#o25
+ Offices number over 25000 square feet
+ y            /initialize
+ 0         /default
+ mo08' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md09
+ y        /change header
+ OFo300
+ Offices over 300000 square feet
+ y            /initialize
+ 0         /default
+ mo09' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md10
+ y        /change header
+ O#o300
+ Offices number over 300000 square feet
+ y            /initialize
+ 0         /default
+ mo10' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md11
+ y        /change header
+ REu50F
+ Retail under 50000 square feet w FOOD
+ y            /initialize
+ 0         /default
+ mo11' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md12
+ y        /change header
+ R#u50F
+ Retail number under 50000 sqft FOOD
+ y            /initialize
+ 0         /default
+ mo12' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md13
+ y        /change header
+ REo50F
+ Retail over 50000 sqft FOOD
+ y            /initialize
+ 0         /default
+ mo13' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md14
+ y        /change header
+ R#o50F
+ Retail number over 50000 sqft FOOD
+ y            /initialize
+ 0         /default
+ mo14' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md15
+ y        /change header
+ REu50N
+ Retail under 50000 square feet no FOOD
+ y            /initialize
+ 0         /default
+ mo15' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md16
+ y        /change header
+ R#u50N
+ Retail number under 50000 sqft no FOOD
+ y            /initialize
+ 0         /default
+ mo16' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md17
+ y        /change header
+ REo50N
+ Retail over 50000 sqft no FOOD
+ y            /initialize
+ 0         /default
+ mo17' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md18
+ y        /change header
+ R#o50N
+ Retail number over 50000 sqft no FOOD
+ y            /initialize
+ 0         /default
+ mo18' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md19
+ y        /change header
+ HOUSES
+ Single Family Detached Dwelling Units
+ y            /initialize
+ 0         /default
+ mo19' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md20
+ y        /change header
+ TOWNHS
+ Single Family Attached Dwelling Units
+ y            /initialize
+ 0         /default
+ mo20' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md21
+ y        /change header
+ GARDEN
+ Garden Apartments
+ y            /initialize
+ 0         /default
+ mo21' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md22
+ y        /change header
+ HIRISE
+ High Rise Apartments
+ y            /initialize
+ 0         /default
+ mo22' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ ~/
+ 1         /matrix calculations
+ y            /save
+ md30
+ y        /change header
+ METROd
+ Distance to nearest METRO Station
+ y            /initialize
+ 0         /default
+ mo30' 
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/
+ ~/
+ ~/
+ ~/ ##############################
+ ~/ ORIGINS
+ ~/ ##############################
+ 1         /matrix calculations
+ y            /save
+ mo01
+ y        /change header
+ TRIPSO
+ Trips Originating in Zone
+ y            /initialize
+ 0         /default
+ (((mo06/1000)*1.38 + (mo07/1000)*1.70 - mo08*7+ (mo09/1000)*1.70 + mo10*115) * 
+ (1-(0.50)*(mo30.le.1000)))*0.13
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n        /change header
+ mo01+0.25*((mo11/1000)*12.36+(mo13/1000)*7.43+(mo15/1000)*12.36
+ -0.05*mo16+0.2*(200-mo16)+
+ (mo17/1000)*7.43-0.05*mo18+0.2*(200-(mo17/1000)))*0.53 
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ mo01
+ n        /change header
+ mo01+((mo19*0.95)*(mo19.le.75)+(mo19*0.62+25)*(mo19.gt.75))*0.73
+ +((mo20*0.48)*(mo20.le.100)+(mo20*0.53-5)*(mo20.gt.100))*0.76
+ +((mo21*0.44)*(mo21.le.75)+(mo21*0.40+3)*(mo21.gt.75))*0.76
+ +((mo22*0.40)*(mo22.le.100)+(mo22*0.29+11)*(mo22.gt.100))*0.75
+
+                 /constraint matrix
+ n              /no submatrix
+ ~/ ##############################
+ ~/ DESTINATIONS
+ ~/ ##############################
+ 1         /matrix calculations
+ y            /save
+ md01
+ y        /change header
+ TRIPSD
+ Trips Destined For Zone
+ y            /initialize
+ 0         /default
+ (((md06/1000)*1.38 + (md07/1000)*1.70 - md08*8+ (md09/1000)*1.70 + md10*115) * 
+ (1-(0.50)*(md04.le.1000)))*0.87
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ md01+0.25*((md11/1000)*12.36+(md13/1000)*7.43+(md15/1000)*12.36-0.05*md16
+ +0.2*(200-md16)+(md17/1000)*7.43-0.05*md18+0.2*(200-(md17/1000)))*0.53 
+  
+                 /constraint matrix
+ n              /no submatrix
+ 1         /matrix calculations
+ y            /save
+ md01
+ n        /change header
+ md01+((md19*0.95)*(md19.le.75)+(md19*0.62+25)*(md19.gt.75))*0.27
+ +((md20*0.48)*(md20.le.100)+(md20*0.53-5)*(md20.gt.100))*0.24
+ +((md21*0.44)*(md21.le.75)+(md21*0.40+3)*(md21.gt.75))*0.24
+ +((md22*0.40)*(md22.le.100)+(md22*0.29+11)*(md22.gt.100))*0.25
+
+                 /constraint matrix
+ n              /no submatrix
+ q

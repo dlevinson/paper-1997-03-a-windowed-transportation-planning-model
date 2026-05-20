@@ -1,0 +1,1 @@
+ ~/ t.listcents ~/ emme2 clear 214 batch -m "t.listcents" ~/ macro to list centroids 1         /list nodes (214) n          /not all nodes 1,6000                  /selected node numbers   q q

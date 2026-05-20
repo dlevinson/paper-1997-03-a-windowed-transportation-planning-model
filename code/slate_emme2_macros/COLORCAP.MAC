@@ -1,0 +1,68 @@
+ ~/ t.colorcap, put color codes for lane capacities
+ ~/ emme2 clear 241 batch -m "t.colorcap"
+ ~/ DML 8/9/91
+ ~/ ul2=capacity 
+ 1        /netcalc
+ y
+ ul1
+ 0
+  
+ all
+ 4
+ 1
+ y
+ ul1
+ 2
+  
+ ul2=1,1000
+  
+ 4
+ 1
+ y
+ ul1
+ 3
+  
+ ul2=1001,1300
+  
+ 4
+ 1
+ y
+ ul1
+ 4
+  
+ ul2=1301,1400
+  
+ 4
+ 1
+ y
+ ul1
+ 5
+  
+ ul2=1401,1500
+  
+ 4
+ 1
+ y
+ ul1
+ 6
+  
+ ul2=1501,1600
+  
+ 4
+ 1
+ y
+ ul1
+ 7
+  
+ ul2=1601,1800
+  
+ 4
+ 1
+ y
+ ul1
+ 8
+  
+ ul2=1801,9999
+  
+ 4
+ q

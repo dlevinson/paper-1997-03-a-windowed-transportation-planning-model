@@ -1,0 +1,18 @@
+ ~/ t.punchCOM
+ ~/ punch out Commercial Land Use
+ ~/ usage: emme2 clear 314 batch -m "t.punchCOM"
+ ~/ DML 2.14.92
+ 1        /list a matrix
+ 3           /several
+ mo06        /Square Footage of Offices < 25000 sq.ft
+ mo07        /Square Footage of Offices > 25000 sq.ft & < 300000
+ mo09        /Square Footage of Offices < 300000 sq.ft
+ mo11        /Gross Leasable Area Retail < 50000 + Food
+ mo13        /Gross Leasable Area Retail < 50000
+ mo15        /Gross Leasable Area Retail > 50000 + Food
+ mo17        /Gross Leasable Area Retail > 50000 
+  
+  
+ n        /no submatrix
+ q
+ q

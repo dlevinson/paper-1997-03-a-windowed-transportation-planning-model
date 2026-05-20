@@ -1,0 +1,434 @@
+~/ t.newvdf
+~/ DML 8/9/91
+~/ creates new vdf codes for links based on cross-classification
+~/ of #lanes by policy area
+~/
+~/ usage: emme2 clear 241 batch -m "t.newvdf"
+~/
+~/ t  functions  
+~/ fd1  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/ fd2  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/ fd3  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/ fd4  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/ fd5  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4)
+~/ fd6  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/ fd7  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/ fd8  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/ fd9  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/ fd10 =(60 * length / ul3) * (1 + .12 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.68 * put(get(1) * get(1)) * get(2)) 
+~/ fd11 =(60 * length / ul3) * (1 + .11 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.70 * put(get(1) * get(1)) * get(2) )
+~/ fd12 =(60 * length / ul3) * (1 + .16 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.47 * put(get(1) * get(1)) * get(2) )
+~/ fd13 =(60 * length / ul3) * (1 + .13 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.65 * put(get(1) * get(1)) * get(2) )
+~/ fd14 =(60 * length / ul3) * (1 + .20 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.46 * put(get(1) * get(1)) * get(2) )
+~/ fd15 =(60 * length / ul3) * (1 + .19 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.48 * put(get(1) * get(1)) * get(2) )
+~/ fd16 =(60 * length / ul3) * (1 + .19 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.48 * put(get(1) * get(1)) * get(2) )
+~/ fd17 =(60 * length / ul3) * (1 + .19 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.48 * put(get(1) * get(1)) * get(2) )
+~/ fd18 =(60 * length / ul3) * (1 + .17 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.54 * put(get(1) * get(1)) * get(2) )
+~/ fd19 =(60 * length / ul3) * (1 + .26 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.30 * put(get(1) * get(1)) * get(2) )
+~/ fd20 =(60 * length / ul3) * (1 + .23 * exp(put(volau / (ul2 * lanes))
+~/      ) + 0.38 * put(get(1) * get(1)) * get(2) )
+~/ fd21 =(60 * length / ul3) * (1 + .23 * exp(put(volau / (ul2 * lanes))
+~/        ) + 0.38 * put(get(1) * get(1)) * get(2) )
+~/
+~/
+~/
+~/ fd28  =(60 * length / ul3) * (1 + (volau / (ul2 * lanes)) ^ 4) 
+~/
+~/
+ ~/ ul2=0
+ 1
+ y
+ ul2
+ 0
+  
+ all
+ 4
+ ~/ ul3=0
+ 1
+ y
+ ul3
+ 0
+  
+ all
+ 4
+~/ ul3=vdf
+ 1    
+ y
+ ul3
+ vdf
+  
+ all
+ 4
+ ~/ BAD VDFS
+ 1
+ y
+ ul3
+ 1
+  
+ vdf=1,29
+  
+ 4
+ ~/ ROUTE 5,6,7 and 9 SHOULD HAVE VDF=0
+ 1
+ y
+ ul3
+ 0
+  
+ 5 995 10
+ 6 996 10
+ 7 997 10
+ 9 999 10
+  
+ 4
+ ~/ ROUTE TYPE 0 SHOULD HAVE VDF=0 if not auto link
+ 1
+ y
+ ul3
+ 0
+  
+ 0 990 10
+ &!mod=c
+  
+ 4
+ ~/ ROUTE TYPE 0 SHOULD HAVE VDF=31 if auto link
+ 1
+ y
+ ul3
+ 31
+  
+ 0 990 10
+ &mod=c
+  
+ 4
+ ~/ RAMPS (ROUTE TYPE 8) SHOULD HAVE VDF 28
+ 1
+ y
+ ul3
+ 28
+  
+ 8,998,10 
+  
+ 4
+ ~/
+ 1
+ y
+ ul3
+ 10
+  
+ 102,192,10 
+ ||103,193,10 
+ ||104,194,10
+ &&lanes=1
+  
+ 4
+ 1
+ y
+ ul3
+ 11
+  
+ 202,332,10
+ ||203,333,10
+ ||204,334,10
+ &&lanes=1
+
+ 4
+ 1
+ y
+ ul3
+ 12
+  
+ 342,772,10
+ ||343,773,10
+ ||344,774,10
+ &&lanes=1
+
+ 4
+ 1
+ y
+ ul3
+ 13
+  
+ 782,922,10
+ ||783,923,10
+ ||784,924,10
+ &&lanes=1
+  
+ 4
+ 1
+ y
+ ul3
+ 14
+  
+ 102,192,10 
+ ||103,193,10 
+ ||104,194,10
+ && lanes=2
+  
+ 4
+ 1
+ y
+ ul3
+ 15
+  
+ 202,332,10
+ ||203,333,10
+ ||204,334,10
+ &&lanes=2
+
+ 4
+ 1
+ y
+ ul3
+ 16
+  
+ 342,772,10
+ ||343,773,10
+ ||344,774,10
+ &&lanes=2
+
+ 4
+ 1
+ y
+ ul3
+ 17
+  
+ 782,922,10
+ ||783,923,10
+ ||784,924,10
+ &&lanes=2
+
+ 4
+ 1
+ y
+ ul3
+ 18
+  
+ 102,192,10 
+ ||103,193,10 
+ ||104,194,10
+ &! lanes=1
+ &! lanes=2
+  
+ 4
+ 1
+ y
+ ul3
+ 19
+  
+ 202,332,10
+ ||203,333,10
+ ||204,334,10
+ &! lanes=1
+ &! lanes=2
+
+ 4
+ 1
+ y
+ ul3
+ 20
+  
+ 342,772,10
+ ||343,773,10
+ ||344,774,10
+ &! lanes=1
+ &! lanes=2
+
+ 4
+ 1
+ y
+ ul3
+ 21
+  
+ 782,922,10
+ ||783,923,10
+ ||784,924,10
+ &! lanes=1
+ &! lanes=2
+  
+ 4
+ ~/ INTERSTATES are VDF 1
+ 1       /netcalc
+ y        /save
+ ul3
+ 1
+  
+ 101 991 10
+  
+ 4
+ ~/ INTERSTATES are VDF 43 or 44 where before 43,44
+ 1       /netcalc
+ y        /save
+ ul3
+ vdf
+  
+ vdf=43,44
+  
+ 4
+ ~/ set VDF=ul3
+ 1
+ y
+ vdf
+ ul3
+  
+ all
+ 4
+ ~/
+ ~/ t.newffspd
+ 1       /netcalc
+ y        /save
+ ul3
+ 65
+  
+ 1 991 10
+  
+ 4
+ ~/
+ 1
+ y
+ ul3
+ 45
+  
+ 2 992 10
+  
+ 4
+ ~/
+ 1
+ y
+ ul3
+ 35
+  
+ 3 993 10
+  
+ 4
+ ~/
+ 1
+ y
+ ul3
+ 30
+  
+ 4 994 10
+  
+ 4
+ ~/
+ ~/ t.newcap
+ 1       /netcalc
+ y        /save
+ ul2
+ 2100
+  
+ 1 991 10
+  
+ 4
+ ~/
+ 1
+ y
+ ul2
+ 1600
+  
+ 2 992 10
+  
+ 4
+ ~/
+ 1
+ y
+ ul2
+ 1300
+  
+ 3 993 10
+  
+ 4
+ ~/
+ 1
+ y
+ ul2
+ 1000
+  
+ 4 994 10
+  
+ 4
+ ~/
+ ~/ RAMPS
+ ~/ CAPACITY
+ 1
+ y
+ ul2
+ 1300
+  
+ 8 998 10
+  
+ 4
+ ~/
+ ~/ RAMPS
+ ~/ FREEFLOW SPEED
+ 1
+ y
+ ul3
+ 25
+  
+ 8 998 10
+  
+ 4
+ ~/
+ ~/
+ ~/ BATCH IN LINK SPECIFIC CALIBRATED SPEEDS AND CAPACITIES
+ ~/
+ ~/ batch in d241.in (d241.newcal)
+ ~/ freeflow speed
+ 3            /input using batch entry
+ ul3
+ all
+ 1,2,5
+ n
+ y
+ ~/ batch in d241.in (d241.newcal)
+ ~/ capacity
+ 3            /input using batch entry
+ ul2
+ all
+ 1,2,6
+ n
+ y
+ ~/ put speed and capacity as one term in ul2
+ 1   /network calc
+ y
+ ul1
+ 0
+  
+ all
+ 4
+ ~/ determine last 2 digits of capacity
+ 1
+ y
+ ul1
+ ul2/100 - int(ul2/100)
+  
+ all
+ 4
+ ~/ set ul1 = capacity (2 digit) *100 + freeflow speed
+ 1
+ y
+ ul1
+ ul2-ul1+ul3
+  
+ all
+ 4
+ ~/ set ul2 = ul1
+ 1
+ y
+ ul2
+ ul1
+  
+ all
+ 4
+ q
+ 9

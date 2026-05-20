@@ -1,0 +1,68 @@
+ ~/ t.colorffs
+ ~/ color freeflow speeds
+ ~/ DML 8.9.91
+ ~/ ul3=freeflow speed
+ 1        /netcalc
+ y
+ ul1
+ 0
+  
+ all
+ 4
+ 1
+ y
+ ul1
+ 2
+  
+ ul3=1,10
+  
+ 4
+ 1
+ y
+ ul1
+ 3
+  
+ ul3=11,20
+  
+ 4
+ 1
+ y
+ ul1
+ 4
+  
+ ul3=21,30
+  
+ 4
+ 1
+ y
+ ul1
+ 5
+  
+ ul3=31,40
+  
+ 4
+ 1
+ y
+ ul1
+ 6
+  
+ ul3=41,50
+  
+ 4
+ 1
+ y
+ ul1
+ 7
+  
+ ul3=51,60
+  
+ 4
+ 1
+ y
+ ul1
+ 8
+  
+ ul3=61,9999
+  
+ 4
+ q

@@ -1,0 +1,92 @@
+ ~/ t.sumchoice
+ ~/ macro to sum trip generation * mode choice * departure time choice
+ ~/ to use for trip distribution
+ ~/ DML 12.8.92
+ ~/ usage: emme2 clear 321 batch -m "t.sumchoice"
+ ~/
+ ~/ ORIGINS
+ ~/
+ ~/ AUTO NON-WORK TRIP SUMMATION
+ 1      /matrix calculations
+ y       /save
+ mo07
+ y
+ AUWORK
+ Auto Work Trips
+ y
+ 0
+ (mo51+mo52+mo56)*(mo42)*(mo10+mo11/2+mo12/3.3)
+  
+           /constraint matrix
+ n            /submatrix
+ ~/ AUTO NON-WORK TRIP SUMMATION
+ 1      /matrix calculations
+ y       /save
+ mo08
+ y
+ AUNONW
+ Auto Non-Work Trips
+ y
+ 0
+ (mo53+mo54+mo55)*(mo43)*(mo17+mo18/2+mo19/3.3)
+  
+           /constraint matrix
+ n            /submatrix
+ ~/ TRANSIT TRIP SUMMATION
+ 1      /matrix calculations
+ y       /save
+ mo09
+ y
+ TRANSI
+ Transit Trips (Work and Non-Work)
+ y
+ 0
+ (mo51+mo52+mo56)*(mo13+mo14+mo15+mo16)
+ +(mo53+mo54+mo55+mo57)*(mo20+mo21)
+  
+           /constraint matrix
+ n            /submatrix
+ ~/
+ ~/ DESTIONATIONS
+ ~/
+ ~/ AUTO NON-WORK TRIP SUMMATION
+ 1      /matrix calculations
+ y       /save
+ md07
+ y
+ AUWORK
+ Auto Work Trips
+ y
+ 0
+ (md51+md52+md56)*(md42)*(md10+md11/2+md12/3.3)
+  
+           /constraint matrix
+ n            /submatrix
+ ~/ AUTO NON-WORK TRIP SUMMATION
+ 1      /matrix calculations
+ y       /save
+ md08
+ y
+ AUNONW
+ Auto Non-Work Trips
+ y
+ 0
+ (md53+md54+md55)*(md43)*(md17+md18/2+md19/3.3)
+  
+           /constraint matrix
+ n            /submatrix
+ ~/ TRANSIT TRIP SUMMATION
+ 1      /matrix calculations
+ y       /save
+ md09
+ y
+ TRANSI
+ Transit Trips (Work and Non-Work)
+ y
+ 0
+ (md51+md52+md56)*(md13+md14+md15+md16)
+ +(md53+md54+md55+md57)*(md20+md21)
+  
+           /constraint matrix
+ n            /submatrix
+ q

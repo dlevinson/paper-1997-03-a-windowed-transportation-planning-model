@@ -1,0 +1,20 @@
+ ~/ t.punchPA
+ ~/ macro to punch productions and attractions input and normalized
+ ~/ for SLATE model
+ ~/ DML 11.8.91
+ ~/ usage emme2 clear 314 batch -m "t.punchPA"
+ ~/
+ 1             /list a matrix
+ 3             /several matrices by zones
+ mo01          /tz trips input
+ mo02          /externals input
+ mo03          /normalized trips
+ md01          /tz trips input
+ md02          /externals input
+ md03          /normalized trips
+ mo08          /zoneid
+  
+               /no constraint matrix
+ n             /no submatrix
+ q
+ q

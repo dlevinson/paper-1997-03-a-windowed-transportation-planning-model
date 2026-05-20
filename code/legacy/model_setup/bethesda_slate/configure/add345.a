@@ -1,0 +1,1 @@
+BEGIN {}# add345.a# awkscript to add traversals of zones 3,4,5 to a single zone (3)# to smooth BCC distribution# DML 7.10.92{  if (NF == 3) {  ozone=$1  dzone=$2  vol=$3  if (ozone == 4 || ozone == 5) { ozone=3}  if (dzone == 4 || dzone == 5) { dzone=3}  volx[ozone*100+dzone]+=vol}}END { for (x in volx) { print  int(x/100),100*((x/100)%1),volx[x]}}

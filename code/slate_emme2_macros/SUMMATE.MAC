@@ -1,0 +1,24 @@
+ ~/ t.summate
+ ~/ macro to sum origin matrices into scalar matrices
+ ~/ DML 6.23.92
+ ~/ usage: emme2 clear 321 batch -m "t.summate"
+ ~x=0
+ ~:loop
+ ~x+1
+ 1
+ y
+ ms%x%
+ y
+ SMmo%x%
+ Summation of mo%x%
+ y
+ 0
+ mo%x%
+
+ 
+ n
+ +
+ ~?x<99
+ ~$loop
+ q
+ q

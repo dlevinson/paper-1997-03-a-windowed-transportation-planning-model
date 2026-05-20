@@ -1,0 +1,1 @@
+#awk '{print $1,$2,$8,"*","c","100","0.1","10","0 0 0"}' ccons > ccons2 awk '{print $1,$8,$2,"*","c","100","0.1","10","0 0 0"}' ccons >> ccons2 sort -n +1 -2 +2 -3 ccons2 > ccons3 uniq ccons3 > ccons4 

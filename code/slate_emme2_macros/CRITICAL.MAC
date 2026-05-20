@@ -1,0 +1,68 @@
+ ~/ t.critical
+ ~/ save clv in ui1
+ ~/ save los in ui2 (color code)
+ ~/ d241.in file must be inode CLV
+ ~/ DML 2/11/91
+ ~/ usage: emme2 clear 241 batch -m "t.critical"
+ 1
+ y
+ ui1
+ 0
+  
+ all
+ 4
+ 3
+ ui1
+ all
+  
+ n
+ y
+ 1
+ y
+ ui2
+ 0
+  
+ all
+ 4
+ 1
+ y
+ ui2
+ 4
+  
+ ui1=1,704
+  
+ 4
+ 1
+ y
+ ui2
+ 3
+  
+ ui1=705,1056
+  
+ 4
+ 1
+ y
+ ui2
+ 6
+  
+ ui1=1057,1408
+  
+ 4
+ 1
+ y
+ ui2
+ 7
+  
+ ui1=1409,1776
+  
+ 4
+ 1
+ y
+ ui2
+ 2
+  
+ ui1=1777,9999
+  
+ 4
+ 6
+ 9

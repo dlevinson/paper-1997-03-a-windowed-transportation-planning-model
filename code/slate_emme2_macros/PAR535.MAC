@@ -1,0 +1,9 @@
+ ~/module 535 ACCESS_EGRESS Transit Trips
+ 4                    /change module parameters 535
+ n             
+ n           
+ -999999,999999       /upper lower threshold
+ y          
+ y      
+ 5                    /end
+ 9                    /end emme2

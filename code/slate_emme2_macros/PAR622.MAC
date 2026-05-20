@@ -1,0 +1,16 @@
+ ~/622 plot transit volumes
+ 5              /change module parameters
+ 1,1            /width height of nodes without node number
+ 4,4            /width height of nodes with node number
+ 0              /offset to right for links
+ 4              /character height
+ y              /plot only if connected
+ -999999,999999 /lower upper threshold
+ 999999         /hatch width for link bars
+ 999999         /hatch width for node circles
+ .5             /exponent for cicle proportionality
+ 1              /default color index for node volumes
+ y              /ask for color index attribute
+ y              /save
+ 6              /end
+ 9              /end emme2

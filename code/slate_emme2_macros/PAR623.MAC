@@ -1,0 +1,14 @@
+ ~/623 compare transit volumes
+ 7             /change module parameters
+ 1,1           /width height of nodes without node number
+ 4,4           /width height of nodes with node number
+ 0             /offset to right for links
+ 4             /character height for text on links
+ y             /plot nodes only if connected
+ 999999        /hatch width for link bars
+ 999999        /hatch width for node circles
+ .5            /exponent for circle proportionality
+ 2,3           /color indices for positive,negative values
+ y             /save
+ 8             /end 623
+ 9             /end emme2

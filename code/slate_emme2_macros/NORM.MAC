@@ -1,0 +1,71 @@
+ ~/ t.normalize
+ ~/ macro to normalize productions and attractions
+ ~/ usage: emme2 clear 321 batch -m "t.normalize"
+ ~/ DML     10.3.91
+ ~/
+ ~/ mo01 md01 - Local Area Trips Produced and Attracted
+ ~/ mo02 md02 - External Station Trips Produced and Attracted
+ ~/ ms01 - sum of mo01 + mo02
+ ~/ ms02 - sum of md01 + md02
+ ~/ mo03 md03 - Total Trips Vectors normalized to max of P or A
+ ~/ mo05 md05 - adjustment of external stations from traversal
+ ~/
+ ~/ compute sum of originations
+ 1        /matrix calculations
+ y          /save
+ ms01
+ y
+ origin
+ Sum of Origins
+ y
+ 0
+ mo01+mo02/mo05
+  
+ mo05                 /constraint
+ 0,0,exclude
+ n             /submatrix
+ +           /aggregation by origin
+ ~/ compute sum of destinations
+ 1        /matrix calculations
+ y          /save
+ ms02
+ y
+ destin
+ Sum of  Destinations
+ y
+ 0
+ md01+md02/md05
+  
+ md05              /constraint
+ 0,0,exclude
+ n             /submatrix
+ +             /aggregation by destin
+ ~/ compute adjusted origins
+ 1             /matrix calculations
+ y             /save
+ mo03
+ y
+ otrips
+ Origin Trips (adjusted to Destinations)
+ y
+ 0
+ (mo01+mo02/mo05)*(ms02.lt.ms01)+(mo01+mo02/mo05)*(ms02/ms01)*(ms02.ge.ms01)
+  
+ mo05                /constraint
+ 0,0,exclude
+ n               /submatrix
+ ~/ compute adjusted destinations
+ 1             /matrix calculations
+ y             /save
+ md03
+ y
+ dtrips
+ Destination Trips (adjusted to Origins)
+ y
+ 0
+ (md01+md02/md05)*(ms01.lt.ms02)+(md01+md02/md05)*(ms01/ms02)*(ms01.ge.ms02)
+  
+ md05                /constraint
+ 0,0,exclude
+ n               /submatrix
+ q       /quit

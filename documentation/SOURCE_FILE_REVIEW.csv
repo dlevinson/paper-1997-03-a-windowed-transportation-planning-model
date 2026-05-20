@@ -1,0 +1,10 @@
+component,decision,role,file_count,bytes,rationale
+paper,include,paper/final paper reference,2,854787,final published paper and paper README
+model_setup/bethesda_slate,include,model setup/data,298,81312857,north Bethesda SLATE EMME/2 model setup and outputs
+code/slate_driver_scripts,include,code,1,12267,main SLATE shell driver script from the M-NCPPC source archive
+code/slate_emme2_macros,include,code,106,135931,SLATE EMME/2 macro/source folder
+code/slate_travel2_macros,include,code,4,68061,paper-specific SLATE Travel/2 macro files
+data/decoded_model_outputs,include,decoded model outputs,121,5013825,decoded sidecars for legacy compressed model outputs where possible
+data/legacy_encoded_originals,include,preserved originals,1,11194251,ZIP of original encoded HP-UX .Z/.z files
+documentation/scanned_context,include,documentation,2,1628541,scanned SLATE theory/application and flow-chart reports
+documentation/paper_project_notes,include,documentation/data notes,12,259230,"convergence notes, flow files, and model-note inputs from TRR-SLATE"

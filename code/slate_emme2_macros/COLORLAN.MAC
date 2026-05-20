@@ -1,0 +1,74 @@
+ ~/ t.colorlanes
+ ~/ do lanes & color code
+ ~/ DML 8/26/91
+ 1        /net calc
+ y
+ ul1
+ ~/initialize ul1
+ 0
+  
+ all
+ 4
+ ~/
+ 1        /net calc
+ y
+ ul1
+ lanes
+  
+ all
+ 4
+ ~/
+ 1        /net calc
+ y
+ ul2
+ ~/initialize ul2
+ 0
+  
+ all
+ 4
+ 1        /net calc
+ y
+ ul2
+ ~/ blue
+ 4
+  
+ lanes=1
+  
+ 4
+ 1        /net calc
+ y
+ ul2
+ ~/green
+ 3
+  
+ lanes=2
+  
+ 4
+ 1        /net calc
+ y
+ ul2
+ ~/orange
+ 7
+  
+ lanes=3
+  
+ 4
+ 1        /net calc
+ y
+ ul2
+ ~/red
+ 2
+  
+ lanes=4
+  
+ 4
+ 1        /net calc
+ y
+ ul2
+ ~/yellow
+ 6
+  
+ lanes=5,8
+  
+ 4
+ q

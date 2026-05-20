@@ -1,0 +1,1 @@
+BEGIN {}{ inode=$1  jnode=$2  if (inode != previ || jnode != prevj ) {print $0}  previ=inode  prevj=jnode }

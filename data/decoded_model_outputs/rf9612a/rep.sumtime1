@@ -1,0 +1,36 @@
+ EMME/2 Module: 3.21          Date: 92 12 04           User: E055/MNCPPC....BAT           Page:*****
+ Project:       Bethesda Staging Analysis 
+ ---------------------------------------------------------------------------------------------------
+
+
+ MATRIX CALCmLATIONS
+ *******************
+
+
+ Expression:
+
+ ms50 = mf02 * mf04
+
+ Result matrix:                ms50: sumtim    Sum of Person Hours in Study Area       
+
+ Data matrices:                mf02: timout    Output Travel Time from Assignment      
+                               mf04: DEMAND    Demand (work and nonwork)/kfactor       
+
+ Constraint matrix:            mf02: timout    Output Travel Time from Assignment      
+ Constraint interval:            .001       99999      include
+
+ Submatrix:                     all origins            all destinations
+
+ Aggregation over origins:                      7
+ Aggregation o
+
+
+deestinations:                 7
+
+ Number of expression evaluations:         829010
+ Minimum expression value:                .000002
+ Maximum expression value:         2971231.750000
+ Average expression value:              14.197333
+ Sum of expression values:        11769731.000000
+
+ Result:                                 11769732

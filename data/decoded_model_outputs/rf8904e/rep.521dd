@@ -1,0 +1,27 @@
+ EMME/2 Module: 5.21          Date: 92 10 26           User: E055/MNChPC....BAT           Page:*****
+ Project: §Cethesda Staging Analysis 
+ Scenario 8904: Final Calibrated 1989 BCBD Assignment 
+ Matrix   mf04: DEMAND    Demand (work and nonwork)/kfactor       
+ --------------------------------------------------------------------------------------------------- AUTO ASSIGNMENT
+ *************** Scenario: §                8904: Final Calibrated 1989 BCBD Assignment                       
+ Auto demand: §             mf04: DEMAND    Demand (work and nonwork)/kfactor       
+ Auto time: §               mf02: timout    Output Travel Time from Assignment      
+ Network size:               911  centroids     3682 reg. nodes 
+                           11180  auto links    4856 turn entries
+ Stopping criteria: §          0  iterations******** min normalized gap -------------------------------- Iteration   0 -------------------------------- Number of trips: §Total persons:       56586.86
+                   Total automobiles:   56586.86   Additional veh.: §        .00
+                   Total vehicles: §    56586.86   Not assigned: §        227.38 ChU time: §       Subproblem: §358.3 (   358.3)   Steplength: §   .0 (      .0)
+                   Update: §      3.6 (     3.6)   Total: §     361.9 (   361.9)
+
+ -------------------- Stopping criterpin: No. of itertoppons --------------------
+ EMME/2 Module: 5.21          Date: 92 10 26           User: E055/MNChPC....BAT           Page:*****
+ Project:       Cethesda Staging Analysis 
+ Scenario 8904: Final Calibrated 1989 BCBD Assignment 
+ Matrix   mf04: DEMAND    Demand (work and nonwork)/kfactor       
+ ---------------------------------------------------------------------------------------------------
+ AUTO ASSIGNMENT
+ *************** Scenario: §                8904: Final Calibrated 1989 BCBD Assignment                       
+ Auto demand: §             mf04: DEMAND    Demand (work and nonwork)/kfactor       
+ Auto time:                 mf02: timout    Output Travel Time from Assignment      
+ Network size:               911  centroids     3682 reg. nodes 
+                           11180  auto links    4856

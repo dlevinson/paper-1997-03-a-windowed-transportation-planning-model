@@ -1,0 +1,26 @@
+~/##### update demand matrix ##############################################
+~/ THIS SECTION CHANGES - update mf4 to get new ADDITIONAL DEMAND
+~/ m.demadj6 by (Heinz Spiess) modified by DML 5.7.92 6.4.92
+1         / matrix calculations
+y         / save result 
+~/ gpq = newgpq (mf3) when not adjusting capacity
+mf4       / in <gpq>
+y         / modify header
+gpq%ms90%
+New Demand at step %ms90%
+~?q=1
+n
+mf4+(ms93.min.1)*mf5/ms92
+
+mf2
+0.001,999999,include
+n
+~! echo I%ms90%: Z%ms91% M%ms92% L%ms93% >>summary
+1         / matrix calculations
+y         / save result
+ms90      / in scalar 90
+n         / don't change header
+ms90+1
+
+           /constraint matrix
+q

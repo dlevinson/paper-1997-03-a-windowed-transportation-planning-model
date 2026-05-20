@@ -1,0 +1,9 @@
+ 2         /change module parameters 212
+ 4,4       /nodes without number
+ 32,12     /nodes with node number
+ 0.00      /offset to right
+ y         /plot only if conncted
+ y         /auto 2-way links
+ y         /save
+ 3         /end
+ 9         /end emme2

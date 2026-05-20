@@ -1,0 +1,8 @@
+ ~/plot auto volumes on intersections
+ 4           /change module paramters
+ n           /dont plot centconn
+ 999999      /hatch width
+ n           /dont assume left hand traffic
+ y           /save
+ 5           /end 614
+ 9           /end emme2

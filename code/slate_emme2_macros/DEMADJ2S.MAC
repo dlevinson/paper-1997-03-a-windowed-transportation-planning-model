@@ -1,0 +1,35 @@
+~/ /##### compute gradient and objective function ###########################
+~/ m.demadj2 (Heinz Spiess modified by DML 5.7.92)
+1         / network calculation - zero ul3
+y
+ul3
+0
+
+all
+4
+~/ compute link gradient
+1         / network calculation - compute link gradient 
+y
+ul3
+~/ The factor .001 below is a pure scaling factor.  It does not
+~/ influence the computations as such.  Can be adjusted to avoid
+~/ output overflow '********'.
+.0000001*(ul1>0)*(ul1-volau)
+
+all
+4         / none
+1         / network calculation - compute objective function
+n
+~/ The factor .001 below is a pure scaling factor.  It does not
+~/ influence the computations as such.  Can be adjusted to avoid
+~/ output overflow '********'.
+(ul1-volau)*(ul1-volau)*.0000001
+
+not ul1=0
+
+5         / save summary results in scalars
+4         / save sum of result values
+91        / in scalar ms91
+Z-%ms90%  / scalar name
+'Dem adj. obj. function - step %ms90%'
+q

@@ -1,0 +1,18 @@
+~/##### compute maximum gradient ##########################################
+1         / matrix calculation
+y         / save result
+ms92      / in scalar 92
+y
+M-%ms90%  / scalar name
+'maximum abs gradient step %ms90%' / and description
+~?q=1
+y
+0
+abs(mf5/mf4)
+
+mf5
+0.0001,99999,include
+n
+.max.
+.max.
+q

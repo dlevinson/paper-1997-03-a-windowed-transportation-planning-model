@@ -1,0 +1,13 @@
+ ~/ t.plottmv
+ ~/ usage emme2 clear 614 batch -m "t.plottmv"
+ ~/ plots volumes on intersections
+ ~/ DML 11.5.91
+ 1      /auto volumes on intersection
+ all
+ 16       /intersections per page
+ 3       /bars and numeric values
+ 1000        /scale factor
+ ~/ annotations:
+
+ q
+ q

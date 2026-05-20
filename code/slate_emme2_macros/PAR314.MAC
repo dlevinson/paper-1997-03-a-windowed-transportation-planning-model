@@ -1,0 +1,12 @@
+ 4           /change module parameters
+ 1           /dimensions for tabulated report
+ 25,10       /max rows and columns
+ 8,2         /colwidth and number of decimals
+ 2           /dimensions for other reports
+ 9,2         /value width and number of decimals
+ 3           /default value
+ 0           /=0
+ 4           /end change module parameters
+ y           /save to disk
+ 5           /end 314
+ 9           /quit emme2

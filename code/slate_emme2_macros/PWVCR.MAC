@@ -1,0 +1,25 @@
+~/ t.plotwvcr
+~/ usage: emme2 clear 612 batch -m "t.plotwvcr $window"
+~/ macro to plot volume congestion ratio (A-F scale)
+~/ for Montgomery County
+~/ DML 12/24/90
+1        / plot auto volumes on links
+3        / plot bars & numbers
+n        / don't plot nodes
+n        / don't plot turning movements
+y        / plot auto network
+y        / use color attributes
+2        / from ul2
+101 981 10
+102 982 10
+103 983 10
+104 984 10
+108 988 10
+ 
+y        / yes window
+4
+%1%
+1000     / bar scale
+l 1 4 5
+q
+q

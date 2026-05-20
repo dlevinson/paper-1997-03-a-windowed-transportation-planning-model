@@ -1,0 +1,30 @@
+ ~/ t.difference
+ ~/ calculate difference simulated - obsevered volume
+ ~/ DML 8/8/91
+ ~/ usage: emme2 clear 241 batch -m "t.difference"
+ ~/
+ 1              /network calculator
+ y
+ ul1
+ 0
+  
+ all
+ 4              /none report
+ ~/
+ 3              /batch in ul1
+ ul1
+ all
+
+ n               /no report
+ y               /yes save
+ ~/
+ 1              /network calculator
+ y
+ ul1
+ int(volau-ul1)
+  
+ ul1=1,9999
+
+ 4
+ q
+ q

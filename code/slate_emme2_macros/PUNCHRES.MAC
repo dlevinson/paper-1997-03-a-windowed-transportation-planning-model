@@ -1,0 +1,15 @@
+ ~/ t.punchRES
+ ~/ macro to punch out Residential Land Use
+ ~/ usage: emme2 clear 314 batch -m "t.punchRES"
+ ~/ DML 2.14.92
+ 1        /list a matrix
+ 3           /several
+ mo19     /single family detached houses
+ mo20     /single family attached town houses
+ mo21     /garden apartments
+ mo22     /high rise apartments
+  
+  
+ n        /no submatrix
+ q
+ q

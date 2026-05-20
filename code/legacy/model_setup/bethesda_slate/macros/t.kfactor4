@@ -1,0 +1,1 @@
+ ~/ t.kfactor4 ~/ usage: emme2 clear 321 batch -m "t.kfactor4" ~/ DML 8.5.92 ~/ mf4=work and nonwork demand ~/ mf3=kfactor 1      /matcalc y       /save mf4 y DEMAND Demand (work and nonwork)/kfactor n mf4/mf3   mf3                /constraint matrix 0,0,exclude  n q q

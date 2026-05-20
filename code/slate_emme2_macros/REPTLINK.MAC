@@ -1,0 +1,9 @@
+ ~/ t.reptlink
+ ~/ usage: emme2 clear 611 batch -m "t.reptlink"
+ ~/ macro to report out link volumes on all links
+ ~/ for use in calibration
+ ~/ DML 5.18.92
+ 1          /list auto times and volumes on links
+ all
+ q
+ q

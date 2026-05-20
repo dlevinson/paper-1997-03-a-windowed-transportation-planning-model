@@ -1,0 +1,23 @@
+ ~/ t.plotlanes
+ ~/ plot simulated - obsevered volume
+ ~/ DML 8/8/91
+ ~/ usage: emme2 clear 213 batch -m "t.plotlanes"
+ 6      /users data
+ 2      /link
+ 1      /ul1 = sim-obs
+ 3      /bars and number
+ y      /color index
+ 2
+ y      /nodes
+ 101 981 10
+ 102 982 10
+ 103 983 10
+ 104 984 10
+ 108 988 10
+  
+ n
+ ~/ scale
+ 2
+ ~/ demarcations and annotations
+ 4,5         
+ q

@@ -1,0 +1,18 @@
+~/ t.modpar612  ... adjust for large plotter
+~/ execute for vcr plots
+~/ DML 12/24/90
+6            / change 612 module parameters for Large Plotter
+0 0         / width,height of nodes w/o node no.
+4 4        / width,height of nodes w/node no.
+.15          / offset to right for links
+1.75         / char.height for text on links
+y            / plot nodes only if connected to current link types
+-99999999,99999999        / thresholds
+.2           / hatch width
+y            / ask for color index attribute
+             / default max node radius for turning momvement
+y            / Mark intersection nodes with circle
+2,3          / Default color index for nodes,links
+y            / save current mod.param.on disk
+q
+9

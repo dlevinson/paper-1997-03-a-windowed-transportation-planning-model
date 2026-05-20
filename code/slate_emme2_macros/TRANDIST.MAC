@@ -1,0 +1,57 @@
+ ~/ t.trandist
+ ~/ emme2 clear 321 batch -m "t.trandist"
+ ~/ DML 3.2.92
+ ~/ ms10,ms12,ms14  - x coordinate of metros
+ ~/ ms11,ms13,ms15  - y coordinate of metros
+ ~/ mo27 x coordinate of centroid
+ ~/ mo28 y coordinate of centroid
+ 1        /matrix calc
+ y
+ mo24
+ y
+ mdist1
+ Distance in Feet to Nearest Metro 1
+ y
+ 0
+ (((mo27-ms10)*(mo27-ms10))+((mo28-ms11)*(mo28-ms11)))**0.5
+  
+
+ n
+ 1        /matrix calc
+ y
+ mo25
+ y
+ mdist2
+ Distance in Feet to Nearest Metro 2
+ y
+ 0
+ (((mo27-ms12)*(mo27-ms12))+((mo28-ms13)*(mo28-ms13)))**0.5
+  
+
+ n
+ 1        /matrix calc
+ y
+ mo26
+ y
+ mdist3
+ Distance in Feet to Nearest Metro 3
+ y
+ 0
+ (((mo27-ms14)*(mo27-ms14))+((mo28-ms15)*(mo28-ms15)))**0.5
+  
+
+ n  
+ 1        /matrix calc
+ y
+ mo30
+ y
+ mdist
+ Distance in Feet to Nearest Metro
+ y
+ 0
+ mo24*((mo24.lt.mo25)*(mo24.lt.mo26))+mo25*((mo25.lt.mo24)*(mo25.lt.mo26))
+ +mo26*((mo26.lt.mo24)*(mo26.lt.mo25))
+  
+
+ n
+ q

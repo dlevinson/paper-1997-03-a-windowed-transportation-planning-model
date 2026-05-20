@@ -1,0 +1,39 @@
+ ~/ t.distauto
+ ~/ macro to balance otrips and dtrips into trip table
+ ~/ usage: emme2 clear 322 batch -m "t.distauto"
+ ~/ DML 10.3.91 12.7.92
+ ~/
+ ~/ MATRIX BALANCING WORK TRIPS
+ ~/
+ 1         /matrix two-dimensional balancing
+ mf01
+ mo07
+ md07
+ n           /no submatrix
+             /constraint matrix
+ ~/ save balanced matrix and balancing coefficients
+ 2           /save balanced matrix and balancing coefficients
+ mf04
+ y          /change header
+ ODTRIP
+ AUTO O-D Trip Table (balanced)
+ y        /initialize
+ 0
+ ~/
+ ~/ MATRIX BALANCING NONWORK AUTO TRIPS
+ ~/
+ 1         /matrix two-dimensional balancing
+ mf02
+ mo08
+ md08
+ n           /no submatrix
+             /constraint matrix
+ ~/ save balanced matrix and balancing coefficients
+ 2           /save balanced matrix and balancing coefficients
+ mf05
+ y          /change header
+ NWODTR
+ O-D AUTO Non-Work Trip Table (bal)
+ y        /initialize
+ 0
+ q           /quit

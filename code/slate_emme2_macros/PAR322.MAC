@@ -1,0 +1,7 @@
+ ~/change module 322 paramters matrix balancing
+ 3         /change module 322 parameters
+ 10        /max iterations
+ .0001     /min relative error
+ y         /save
+ 4         /end 322
+ 9         /end emme2

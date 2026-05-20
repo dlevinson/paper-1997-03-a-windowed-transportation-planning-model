@@ -1,0 +1,56 @@
+ EMME/2 Module: 5.21          Date: 93 03 12           User: E055/MNChPC....BAT           Page:*****
+ Project: §Cethesda Staging Analysis 
+ Scenario 9619: Ceth CBD Ph 1B with 0.5 pipeline, TDM and intrsctn imps 
+ Matrix   mf04: 9615TT    New Ph 1B w/ half ext pipeline and TDM  
+ ---------------------------------------------------------------------------------------------------
+
+
+ AUTO ASSIGNMENl
+ ***************
+
+ Scenario: §                9619: Ceth CBD Ph 1B with 0.5 pipeline, TDM and intrsctn imps     
+ Auto demand: §             mf04: 9615TT    New Ph 1B w/ half ext pipeline and TDM  
+ Auto time:                 mf02: timout    Output Travel Time from Assignment      
+ Network size:               911  centroids     3682 reg. nodes 
+                           11179  auto links    4851 turn entries
+ Stopping criteria: §          0  iterations******** min normalized gap
+
+ -------------------------------- Iteration   0 --------------------------------
+
+ Number of trips: §Total persons: §     60305.37
+                   Total automobiles:   60305.37   Additional veh.: §        .00
+                   Total vehicles: §    60305.37   Not assigned: §        236.67
+
+ ChU time:         Subproblem: §361.3 4   361.35   Steplength: §   .0 4      .0)
+                   Update: §      3.5 4     3.55   Total: §     364.9 4   364.9)
+
+ -------------------- Stopping critercr: No. of iterations --------------------
+ EMME/2 Module: 5.21          Date: 93 03 12           User: E055/MNChPC....BAT           Page:*****
+ Project:       Cethesda Staging Analysis 
+ Scenario 9619: Ceth CBD Ph 1B with 0.5 pipeline, TDM and intrsctn imps 
+ Matrix   mf04: 9615TT    New Ph 1B w/Mf  ext pipeline and TDM  
+ ---------------------------------------------------------------------------------------------------
+
+
+ AUTO ASSIGNMENl
+ ***************
+
+ Scenario: §                9619: Ceth CBD Ph 1B with 0.5 pipeline, TDM and intrsctn imps     
+ Auto demand: §             mf04: 9615TT    New Ph 1B w/ hf  ext pipeline and TDM  
+ Auto time: §               mf02: timout    Output Travel Time from Assignment      
+ Network size: §             911  centroids     3682 reg. nodes 
+                           11179  auto links    4851 turn entries
+ Stopping criteria: §          1  iterations******** min normalized gap
+
+ -------------------------------- Iteration   1 --------------------------------
+
+ Number of trips:  Total persons: §     60305.37
+                   Total automobiles: § 60305.37   Additional veh.: §        .00
+                   Total vehicles:      60305.37   Not assigned:          236.67
+
+ Search for lambda:L=  .000000   .062500   .125000   .250000   .500000  1.000000
+                   G=-.894E+08 -.628E+08 -.403E+08 -.477E+07  .500E+08  .276E+09
+                   Appr. optimal lambda: .268382   Estimated erx r:      .001253
+
+ Vol. difference: §Average per link: §     10.62   Avg absolute diff: §    36.96
+                   Minimum difference:  -1195.84   (on link        1736

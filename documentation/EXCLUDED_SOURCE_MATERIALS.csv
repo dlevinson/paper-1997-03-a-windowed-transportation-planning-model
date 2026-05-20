@@ -1,0 +1,6 @@
+excluded_source_scope,decision,rationale
+TRR-SLATE/DRAFTS,exclude_from_clean_package,drafts excluded
+TRR-SLATE/*Letter*,exclude_from_clean_package,letters/correspondence excluded
+TRR-SLATE/YUANLIN/*.WPD|*.DOC|*.uu|*.wpo,exclude_from_clean_package,draft/manuscript exchange files excluded
+TRR-SLATE/*.msw,exclude_from_clean_package,paper/manuscript source excluded because final published PDF is retained
+TRR-SLATE/MNCPPC-Consult/TRAVEL2,exclude_from_clean_package,broad Travel/2 documentation excluded from paper package; shared source pointer retained

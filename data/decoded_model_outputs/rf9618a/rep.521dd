@@ -1,0 +1,45 @@
+ EMME/2 Module: 5.21          Date: 93 03 12           User: E055/MNChPC....BAT           Page:*****
+ Project: §Cethesda Staging Analysis 
+ Scenario 9618: Ceth CBD Ph 1B with 0.5 pipeline ext and TDM
+ Matrix   mf04: 9615TT    New Ph 1B w/ half ext pipeline and TDM  
+ ---------------------------------------------------------------------------------------------------
+
+
+ AUTO ASSIGecE/NT
+ ***************
+
+ Scenario: §                9618: Ceth CBD Ph 1B with 0.5 pipeline ext and TDM                
+ Auto demand: §             mf04: 9615TT    New Ph 1B w/ half ext pipeline and TDM  
+ Auto time:                 mf02: timout    Output Travel Time from Assignment      
+ Network size:               911  centroids     3682 reg. nodes 
+                           11179  auto links    4851 turn entries
+ Stopping criteria: §          0  iterations******** min normalized gap
+
+ -------------------------------- Iteration   0 --------------------------------
+
+ Number of trips: §Total persons:       60305.37
+                   Total automobiles:   60305.37   Additional veh.: §        .00
+                   Total vehicles: §    60305.37   Not assigned: §        236.67
+
+ ChU time:         Subproblem: §377.0 4   377.05   Steplength: §   .1 4      .1)
+                   Update: §      3.6 4     3.65   Total: §     380.7 4   380.7)
+
+ -------------------- Stopping criter-- : No. of iterations --------------------
+ EMME/2 Module: 5.21          Date: 93 03 12           User: E055/MNChPC....BAT           Page:*****
+ Project:       Cethesda Staging Analysis 
+ Scenario 9618: Ceth CBD Ph 1B with 0.5 pipeline ext and TDM
+ Matrix   mf04: 9615TT    New Ph 1B w/ half ext pipeline and TDM  
+ ---------------------------------------------------------------------------------------------------
+
+
+ AUTO ASSIGecEENT
+ ***************
+
+ Scenario: §                9618: Ceth CBD Ph 1B with 0.5 pipeline ext and TDM                
+ Auto demand: §             mf04: 9615TT    New Ph 1B w/ half ext pipeline and TDM  
+ Auto time: §               mf02: timout    Output Travel Time from Assignment      
+ Network size: §             911  centroids     3682 reg. nodes 
+                           11179  auto links    4851 turn entries
+ Stopping criteria: §          1  iterations******** min normalized gap
+
+ --------------------------------

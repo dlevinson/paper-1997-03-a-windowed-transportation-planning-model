@@ -1,0 +1,19 @@
+ ~/ t.plotwtrn macro to plot transit volumes
+ ~/ usage: emme2 clear 622 batch -m "t.plotwtrn %1%"
+ ~/ module 6.22
+ 1             /plot transit volumes
+ all          /all transit lines
+ 3           /bars and numeric values
+ n         /no color links
+ n          /no nodes numbers
+ y           /plot base network
+ ul1=0.001,9999999
+  
+ y           /window
+ 4        /use predefined window
+ %1%           /window %1%
+ 1000          /scale factor
+ ~/ annotations and labels
+  
+ q
+ q

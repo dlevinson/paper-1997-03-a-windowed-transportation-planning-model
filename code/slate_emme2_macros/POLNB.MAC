@@ -1,0 +1,114 @@
+~/ t.polcap
+~/ DML 1/24/91
+~/ creates default capacities in ul2 for links based on vdf (default)
+~/ and d241.polcap
+~/ north bethesda SLATE edition 3.5.92
+~/
+~/ usage: emme2 clear 241 batch -m "t.polcap"
+ ~/ put calibration capacities in ul2
+ 1
+ y
+ ul2
+ 2000
+  
+ vdf=1
+  
+ 4
+ 1
+ y
+ ul2
+ 1600
+  
+ vdf=2
+
+ 4
+ 1
+ y
+ ul2
+ 800 
+  
+ vdf=3
+
+ 4
+ 1
+ y
+ ul2
+ 400 
+  
+ vdf=4
+
+ 4
+ ~/
+1
+y
+ul3
+0
+
+all
+4
+ ~/
+1
+y
+ul3
+ul2*lanes
+
+all
+2
+~/ compute v/c ratio
+1
+y
+ul3
+volau/ul3            
+
+ul3=1,9999999
+
+2
+1        / put color attribute codes for vc ratios in ul2
+y        / save result of network calculation
+ul2      / initialize ul2 (color index for vcr)
+0       
+ 
+mode=c 
+ 
+4        / no report
+1        / network calculations
+y        / save result
+ul2      / for links with vcr 0-0.444 ul2=4 (aqua) LOS A,B
+4
+ 
+ul3=0,0.444
+ 
+4        / no summary report
+1        / network calculation
+y        / save result for green color: ul2=3 (vcr of .444-.666) LOS C
+ul2
+3
+ 
+ul3=0.444,0.666
+ 
+4        / no report 
+1        / network calculations
+y        / for vcr .666-.888 ul2=6 (yellow) LOS D
+ul2
+6
+ 
+ul3=0.666,0.888
+ 
+4        / no summary report
+1        / network calculations
+y        / for vcr .888-1.111 ul2=7 (orange) LOS E
+ul2
+7
+ 
+ul3=0.888,1.111
+ 
+4       / no summary report
+1
+y       / for vcr over 1.111 ul2=2 (red) LOS F
+ul2
+2
+ 
+ul3=1.111,999
+ 
+4        / no summary report
+q

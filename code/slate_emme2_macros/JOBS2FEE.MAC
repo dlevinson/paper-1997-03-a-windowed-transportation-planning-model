@@ -1,0 +1,90 @@
+ ~/t.jobs2feet
+ ~/ usage: emme2 clear 321 batch -m "t.jobs2feet"
+ ~/ DML 2.14.92
+ ~/ mo48 estimated office employees by tz
+ ~/ mo49 estimated retail employees by tz
+ ~/ mo50 estimated industrial employees by tz
+ ~/ mo51 estimated other employees by tz
+ 1         /matrix
+ y
+ mo6
+ y
+ offl25
+ Sq Ft Offices < 25K sqft
+ y
+ 0
+ mo48*225+mo50*450+mo51*225
+  
+  
+ n            /no submatrix
+ 1
+ y
+ mo11
+ y
+ RETl50
+ GLA of Retail Centers < 50K sqft
+ y
+ 0
+ mo49*400
+  
+  
+ n
+ ~/ houses to type
+ ~/ mo19 - sfhous
+ ~/ mo20 - thouse
+ ~/ mo21 - garden
+ ~/ mo22 - hirise
+ ~/ mo37 - single family houses by TZ mo45 by Census Block
+ ~/ mo38 - multi family houses by TZ  mo46 by Census Block
+ 1         /matrix
+ y
+ mo19
+ y
+ sfhous
+ Single Family Detached Houses
+ y
+ 0
+ mo45*(1)
+  
+  
+ n            /no submatrix
+ ~/ houses to type
+ 1         /matrix
+ y
+ mo20
+ y
+ thouse
+ Single Family Attached Houses
+ y
+ 0
+ mo45*(0)
+  
+  
+ n            /no submatrix
+ ~/ houses to type
+ 1         /matrix
+ y
+ mo21
+ y
+ garden
+ Garden Apartment Dwelling Unit
+ y
+ 0
+ mo46*(0.5)
+  
+  
+ n            /no submatrix
+ ~/ houses to type
+ 1         /matrix
+ y
+ mo22
+ y
+ hirise
+ High Rise Apartment Dwelling Unit
+ y
+ 0
+ mo46*(0.5)
+  
+  
+ n            /no submatrix
+ q

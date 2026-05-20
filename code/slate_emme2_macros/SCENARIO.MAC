@@ -1,0 +1,4 @@
+n         /do not change terminal
+BAT       /user BATCH
+s=%1%     /set emme2 scenario = %1%
+9         /quit emme2

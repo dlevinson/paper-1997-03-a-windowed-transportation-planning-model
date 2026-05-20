@@ -1,0 +1,25 @@
+~//##### compute optimal step length #######################################
+1         / compute denominator of optimal step
+n
+volad*volad/ms(92)
+
+not ul1=0
+
+5
+4
+94        / save temporarily in scalar 94
+T-%ms90%
+SUM ( volad*volad ) .... step %ms90%
+r
+1         / compute optimal step length now
+n
+(ul1-volau)*volad/ms(94)
+
+not ul1=0
+
+5
+4
+93        / save step length in scalar 93
+L-%ms90%
+Optimal step length .... step %ms90%
+q

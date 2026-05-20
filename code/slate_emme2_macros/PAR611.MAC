@@ -1,0 +1,9 @@
+ ~/module 611 change paramters report auto times and volumes
+ ~?e
+ y             /execute module even though error has occured
+ 4             /change module parameters
+ 0             /digits after decimal for volumes
+ n             /dont annotate report with node labels
+ y             /save
+ 5             /end
+ 9             /end emme2

@@ -1,0 +1,16 @@
+ ~/ t.transpose
+ ~/ macro to transpose all origin matrices to destination matrices
+ ~/ DML 6.23.92
+ ~/ usage: emme2 clear 312 batch -m "t.transpose"
+ ~x=19
+ ~:loop
+ ~x+1
+ 4
+ 3           /transpose
+ mo%x%
+ md%x%
+ n
+ ~?x<99
+ ~$loop
+ q
+ 9

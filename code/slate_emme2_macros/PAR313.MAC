@@ -1,0 +1,11 @@
+ ~/t.modpar313      change module 313 parameters
+ 5         /change module parameters
+ 4,4       /box size
+ 1,1       /width height of nodes without node number
+ 0         /offset to right for links
+ 4         /character height
+ y         /plot only if connected
+ 999999    /hatch width
+ y         /save on disk
+ 6         /end
+ 9         /end emme2

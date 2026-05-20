@@ -1,0 +1,10 @@
+ EMME/2 Module: 5.21          Date: 92 12 23           User: E055/MNCPPC....BAT           Page:*****
+ Project:       Bethesda Staging Analysis 
+ Scenario 9613: Bethesda CBD Phase 1A with Half-AGP Externally
+ Matrix   mf04: 9613TT    Phase 1A Demand w/ 0.5 AGP Ext          
+ --------------------------------------------------------------------------------------------------- AUTO ASSIGNMENT
+ *************** Scenario:                  9613: Bethesda CBD Phase 1A with Half-AGP Externally              
+ Auto demand:               mf04: 9613TT    Phase 1A Demand w/ 0.5 AGP Ext          touto time:                 mf02: timout    Output Travel Time from Assignment      
+ Network size:               911  centroids     3682 reg. nodes 
+                           11180  auto links    4856 turn entries
+ Stopping criteria:            0  iterations******** min normalized gap -------------------------------- Iteration   0 -------------------------------- Number of
