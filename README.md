@@ -1,5 +1,9 @@
 # A Windowed Transportation Planning Model
 
+## Contribution
+
+This paper develops a windowed planning model that combines the behavioral feedback and complete network of a regional model with block-level local detail. The resulting SLATE framework supports analysis of traffic calming, intersection design, localized land-use change, and travel-demand management without the computational burden of modeling an entire region at fine resolution.
+
 ## Bibliographic Information
 
 - Row ID: `paper-1997-03`
