@@ -34,6 +34,16 @@ This is an archival package, not a modern standalone reproduction script. Re-exe
 
 See `PAPER_FIRST_VALIDATION.md` for the paper-to-package evidence check.
 
+## License And Reuse Boundary
+
+The operative repository boundary is in `LICENSE`.
+
+- MIT applies only to clearly author-created, separable software or scripts whose authorship and repository-maintainer rights are supported by source headers, repository records, or other provenance evidence.
+- CC BY 4.0 applies only to author-created repository documentation, package metadata, source-review notes, manifests, and explanatory sidecars to the extent controlled by the paper/project authors or repository maintainers.
+- Publication PDFs, M-NCPPC source archive files, Travel/2 and EMME/2-era model components, public-agency model assets, source data, decoded model-output sidecars, encoded originals, scanned SLATE reports, vendor/runtime files, and other third-party or externally controlled materials retain their original terms or are provided for citation/provenance only.
+
+No file is MIT-licensed merely because it is located under `code/`.
+
 ## Contents
 
 - `paper/`: final published paper reference copy.
@@ -55,7 +65,7 @@ The full shared Travel/2 macro source is not duplicated here. Use `/Users/dlev26
 Generated: 2026-05-20 15:23:47 AEST
 
 - Pipeline: `UPLOADED`
-- Sidecars added/updated: `PACKAGE_STATUS.md`, `PACKAGE_MANIFEST.csv`, `LICENSE_STATUS.md`.
+- Sidecars added/updated: `LICENSE`, `PACKAGE_STATUS.md`, `PACKAGE_MANIFEST.csv`, `LICENSE_STATUS.md`.
 - Paper reference copies are for local audit convenience and are not public-upload assets without rights review.
-- Final GitHub upload should use the manifest include statuses and the license-status note.
+- Final GitHub upload should use the manifest include statuses and the mixed root license.
 <!-- package-hardening-status:end -->

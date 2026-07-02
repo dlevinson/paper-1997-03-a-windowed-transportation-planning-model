@@ -12,10 +12,11 @@ Generated: 2026-05-20 15:23:47 AEST
 - Controlled access status: `none`
 - Human subjects status: `no`
 - Bibliographic citation: Levinson, David M., and Yuanlin Huang. (1997). "Windowed Transportation Planning Model." Transportation Research Record 1607:45-54. https://doi.org/10.3141/1607-07
+- Root license: mixed MIT / CC BY 4.0 / original-terms boundary in `LICENSE`
 
 ## Package Checks
 
-- Files in manifest: 565
+- Files in manifest: 568
 - Paper reference files: 2
 - Code candidates: 405
 - Data candidates: 121
@@ -25,5 +26,6 @@ Generated: 2026-05-20 15:23:47 AEST
 ## Upload Boundary
 
 - Use `PACKAGE_MANIFEST.csv` as the upload checklist.
+- Use `LICENSE` as the operative mixed repository license.
 - Treat files under `paper/` as local reference copies unless rights review explicitly clears them.
-- Confirm finality and license before repository creation.
+- MIT applies only to clearly author-created, separable code with documented authorship/control; CC BY 4.0 applies only to author-created documentation and metadata. Agency/model/source assets, public-agency materials, decoded outputs, encoded originals, vendor/runtime files, and publication PDFs are not relicensed.

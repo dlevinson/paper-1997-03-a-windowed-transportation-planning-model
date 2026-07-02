@@ -1,0 +1,64 @@
+Repository License And Reuse Boundary
+
+This repository contains mixed paper, code, model, data, and documentation
+materials for:
+
+Levinson, David M., and Yuanlin Huang. (1997). "Windowed Transportation
+Planning Model." Transportation Research Record 1607:45-54.
+https://doi.org/10.3141/1607-07
+
+## MIT License For Clearly Author-Created Separable Code
+
+Clearly author-created, separable software or scripts in this repository are
+licensed under the MIT License only to the extent that the repository records,
+source headers, or other provenance evidence show that David M. Levinson,
+Yuanlin Huang, or the paper/project authors control the relevant rights.
+
+Copyright (c) 1997-2026 David M. Levinson, Yuanlin Huang, and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the clearly author-created separable software and associated documentation
+files (the "Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom
+the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+No file is MIT-licensed merely because it is located under `code/`. The MIT
+grant excludes M-NCPPC archive code, Travel/2 and EMME/2-era model components,
+vendor/runtime files, public-agency model assets, source data, and other
+materials not controlled by the paper/project authors.
+
+## CC BY 4.0 For Author-Created Documentation And Metadata
+
+Author-created repository documentation, package metadata, source-review notes,
+manifests, and explanatory sidecars are licensed under Creative Commons
+Attribution 4.0 International (CC BY 4.0), only to the extent the authors or
+repository maintainers control the relevant rights.
+
+## Materials Not Relicensed
+
+The following materials retain their original terms or are provided for
+citation/provenance only:
+
+- Publication PDFs in `paper/`.
+- M-NCPPC source archive files and public-agency model materials.
+- Travel/2, EMME/2, and other vendor/runtime or legacy model-system assets.
+- North Bethesda SLATE model setup, land-use/network inputs, traffic counts,
+  model outputs, decoded model-output sidecars, and encoded originals.
+- Scanned SLATE reports and third-party/public-agency/source materials.
+- Any other files whose authorship or release rights are not controlled by the
+  paper/project authors or repository maintainers.
+
+Use the repository documentation and manifests to determine the provenance of
+individual files before reuse.
